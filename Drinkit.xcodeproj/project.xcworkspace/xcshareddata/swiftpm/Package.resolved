@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "dtpagercontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tungvoduc/DTPagerController",
+      "state" : {
+        "branch" : "master",
+        "revision" : "9615496ac8efd2d961013d9f8276411a9f7d54f5"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    }
+  ],
+  "version" : 2
+}

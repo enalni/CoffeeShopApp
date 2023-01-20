@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1162E10B29797A0B00F97DE4 /* TagFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */; };
+		1162E10D29797A1C00F97DE4 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10C29797A1C00F97DE4 /* Row.swift */; };
+		1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */; };
+		117E70BE297ABA5D00C17F9F /* AutorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */; };
+		117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70C2297ADA7300C17F9F /* AVPlayerView.swift */; };
+		117E70CE297AF26500C17F9F /* cof1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 117E70CC297AF26500C17F9F /* cof1.mp4 */; };
+		117E70CF297AF26500C17F9F /* cof2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 117E70CD297AF26500C17F9F /* cof2.mp4 */; };
 		119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A02977EEE9007D6A44 /* AppDelegate.swift */; };
 		119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A22977EEE9007D6A44 /* SceneDelegate.swift */; };
-		119E82A52977EEE9007D6A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A42977EEE9007D6A44 /* ViewController.swift */; };
-		119E82A82977EEE9007D6A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119E82A62977EEE9007D6A44 /* Main.storyboard */; };
+		119E82A52977EEE9007D6A44 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A42977EEE9007D6A44 /* MainViewController.swift */; };
 		119E82AA2977EEE9007D6A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119E82A92977EEE9007D6A44 /* Assets.xcassets */; };
 		119E82AD2977EEE9007D6A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119E82AB2977EEE9007D6A44 /* LaunchScreen.storyboard */; };
+		119E82B62978075E007D6A44 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 119E82B52978075E007D6A44 /* SnapKit */; };
+		119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BB2978093A007D6A44 /* UIView + Extensions.swift */; };
+		119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BE29780A3D007D6A44 /* DrinkitView.swift */; };
+		119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C0297812C5007D6A44 /* LoginViewButton.swift */; };
+		119E82C329781C01007D6A44 /* CustomSegmnetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */; };
+		119E82C629781C19007D6A44 /* DTPagerController in Frameworks */ = {isa = PBXBuildFile; productRef = 119E82C529781C19007D6A44 /* DTPagerController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
+		1162E10C29797A1C00F97DE4 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlCollectionCell.swift; sourceTree = "<group>"; };
+		117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewController.swift; sourceTree = "<group>"; };
+		117E70C2297ADA7300C17F9F /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		117E70CC297AF26500C17F9F /* cof1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cof1.mp4; sourceTree = "<group>"; };
+		117E70CD297AF26500C17F9F /* cof2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cof2.mp4; sourceTree = "<group>"; };
 		119E829D2977EEE9007D6A44 /* Drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119E82A02977EEE9007D6A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119E82A22977EEE9007D6A44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		119E82A42977EEE9007D6A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		119E82A72977EEE9007D6A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		119E82A42977EEE9007D6A44 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		119E82A92977EEE9007D6A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119E82AC2977EEE9007D6A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		119E82AE2977EEE9007D6A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119E82BB2978093A007D6A44 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		119E82BE29780A3D007D6A44 /* DrinkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkitView.swift; sourceTree = "<group>"; };
+		119E82C0297812C5007D6A44 /* LoginViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewButton.swift; sourceTree = "<group>"; };
+		119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmnetControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,16 +53,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				119E82C629781C19007D6A44 /* DTPagerController in Frameworks */,
+				119E82B62978075E007D6A44 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117E70BA297AB9F800C17F9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */,
+				1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */,
+				1162E10C29797A1C00F97DE4 /* Row.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		117E70BB297ABA0500C17F9F /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				119E82BE29780A3D007D6A44 /* DrinkitView.swift */,
+				119E82C0297812C5007D6A44 /* LoginViewButton.swift */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		117E70BC297ABA2F00C17F9F /* CustomSegmnetControl */ = {
+			isa = PBXGroup;
+			children = (
+				119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */,
+			);
+			path = CustomSegmnetControl;
+			sourceTree = "<group>";
+		};
+		117E70C1297ADA5700C17F9F /* AVPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				117E70C2297ADA7300C17F9F /* AVPlayerView.swift */,
+			);
+			path = AVPlayerView;
+			sourceTree = "<group>";
+		};
 		119E82942977EEE9007D6A44 = {
 			isa = PBXGroup;
 			children = (
 				119E829F2977EEE9007D6A44 /* Drinkit */,
+				117E70CC297AF26500C17F9F /* cof1.mp4 */,
+				117E70CD297AF26500C17F9F /* cof2.mp4 */,
 				119E829E2977EEE9007D6A44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +117,60 @@
 		119E829F2977EEE9007D6A44 /* Drinkit */ = {
 			isa = PBXGroup;
 			children = (
+				119E82B7297807C3007D6A44 /* Application */,
+				119E82BD29780A2A007D6A44 /* View */,
+				119E82B8297807E4007D6A44 /* ViewContainers */,
+				119E82B9297807F1007D6A44 /* Resources */,
+				119E82BA2978091E007D6A44 /* Extensions */,
+			);
+			path = Drinkit;
+			sourceTree = "<group>";
+		};
+		119E82B7297807C3007D6A44 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				119E82A02977EEE9007D6A44 /* AppDelegate.swift */,
 				119E82A22977EEE9007D6A44 /* SceneDelegate.swift */,
-				119E82A42977EEE9007D6A44 /* ViewController.swift */,
-				119E82A62977EEE9007D6A44 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		119E82B8297807E4007D6A44 /* ViewContainers */ = {
+			isa = PBXGroup;
+			children = (
+				119E82A42977EEE9007D6A44 /* MainViewController.swift */,
+				117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */,
+			);
+			path = ViewContainers;
+			sourceTree = "<group>";
+		};
+		119E82B9297807F1007D6A44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				119E82A92977EEE9007D6A44 /* Assets.xcassets */,
 				119E82AB2977EEE9007D6A44 /* LaunchScreen.storyboard */,
 				119E82AE2977EEE9007D6A44 /* Info.plist */,
 			);
-			path = Drinkit;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		119E82BA2978091E007D6A44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				119E82BB2978093A007D6A44 /* UIView + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		119E82BD29780A2A007D6A44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				117E70C1297ADA5700C17F9F /* AVPlayerView */,
+				117E70BA297AB9F800C17F9F /* Cell */,
+				117E70BB297ABA0500C17F9F /* UIBarButtonItem */,
+				117E70BC297ABA2F00C17F9F /* CustomSegmnetControl */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +189,10 @@
 			dependencies = (
 			);
 			name = Drinkit;
+			packageProductDependencies = (
+				119E82B52978075E007D6A44 /* SnapKit */,
+				119E82C529781C19007D6A44 /* DTPagerController */,
+			);
 			productName = Drinkit;
 			productReference = 119E829D2977EEE9007D6A44 /* Drinkit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +221,10 @@
 				Base,
 			);
 			mainGroup = 119E82942977EEE9007D6A44;
+			packageReferences = (
+				119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				119E82C429781C19007D6A44 /* XCRemoteSwiftPackageReference "DTPagerController" */,
+			);
 			productRefGroup = 119E829E2977EEE9007D6A44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +239,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117E70CE297AF26500C17F9F /* cof1.mp4 in Resources */,
+				117E70CF297AF26500C17F9F /* cof2.mp4 in Resources */,
 				119E82AD2977EEE9007D6A44 /* LaunchScreen.storyboard in Resources */,
 				119E82AA2977EEE9007D6A44 /* Assets.xcassets in Resources */,
-				119E82A82977EEE9007D6A44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +253,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119E82A52977EEE9007D6A44 /* ViewController.swift in Sources */,
+				117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */,
+				1162E10B29797A0B00F97DE4 /* TagFlowLayout.swift in Sources */,
+				1162E10D29797A1C00F97DE4 /* Row.swift in Sources */,
+				119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */,
+				117E70BE297ABA5D00C17F9F /* AutorizationViewController.swift in Sources */,
+				119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */,
+				119E82A52977EEE9007D6A44 /* MainViewController.swift in Sources */,
+				119E82C329781C01007D6A44 /* CustomSegmnetControl.swift in Sources */,
+				1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */,
 				119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */,
+				119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */,
 				119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +271,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		119E82A62977EEE9007D6A44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				119E82A72977EEE9007D6A44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		119E82AB2977EEE9007D6A44 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +405,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TPZ539LNM7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Drinkit/Info.plist;
+				INFOPLIST_FILE = Drinkit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +432,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TPZ539LNM7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Drinkit/Info.plist;
+				INFOPLIST_FILE = Drinkit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +472,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		119E82C429781C19007D6A44 /* XCRemoteSwiftPackageReference "DTPagerController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tungvoduc/DTPagerController";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		119E82B52978075E007D6A44 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		119E82C529781C19007D6A44 /* DTPagerController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 119E82C429781C19007D6A44 /* XCRemoteSwiftPackageReference "DTPagerController" */;
+			productName = DTPagerController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 119E82952977EEE9007D6A44 /* Project object */;
 }
