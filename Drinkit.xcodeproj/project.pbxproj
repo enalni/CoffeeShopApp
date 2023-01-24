@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11277F76297ECE7900875127 /* drip2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 11277F75297ECE7900875127 /* drip2.MP4 */; };
 		1162E10B29797A0B00F97DE4 /* TagFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */; };
 		1162E10D29797A1C00F97DE4 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10C29797A1C00F97DE4 /* Row.swift */; };
 		1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */; };
 		117E70BE297ABA5D00C17F9F /* AutorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */; };
 		117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70C2297ADA7300C17F9F /* AVPlayerView.swift */; };
-		117E70CE297AF26500C17F9F /* cof1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 117E70CC297AF26500C17F9F /* cof1.mp4 */; };
-		117E70CF297AF26500C17F9F /* cof2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 117E70CD297AF26500C17F9F /* cof2.mp4 */; };
+		117E70D1297AF7C800C17F9F /* CoffeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */; };
 		119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A02977EEE9007D6A44 /* AppDelegate.swift */; };
 		119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A22977EEE9007D6A44 /* SceneDelegate.swift */; };
 		119E82A52977EEE9007D6A44 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A42977EEE9007D6A44 /* MainViewController.swift */; };
@@ -24,17 +24,18 @@
 		119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BE29780A3D007D6A44 /* DrinkitView.swift */; };
 		119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C0297812C5007D6A44 /* LoginViewButton.swift */; };
 		119E82C329781C01007D6A44 /* CustomSegmnetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */; };
-		119E82C629781C19007D6A44 /* DTPagerController in Frameworks */ = {isa = PBXBuildFile; productRef = 119E82C529781C19007D6A44 /* DTPagerController */; };
+		11C43164297FFF4700DB944C /* ShoppingCartViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C43163297FFF4700DB944C /* ShoppingCartViewControllers.swift */; };
+		11D62762297D7A5C00A7C818 /* drip.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 11D62761297D7A5C00A7C818 /* drip.MP4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11277F75297ECE7900875127 /* drip2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip2.MP4; sourceTree = "<group>"; };
 		1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
 		1162E10C29797A1C00F97DE4 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlCollectionCell.swift; sourceTree = "<group>"; };
 		117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewController.swift; sourceTree = "<group>"; };
 		117E70C2297ADA7300C17F9F /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
-		117E70CC297AF26500C17F9F /* cof1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cof1.mp4; sourceTree = "<group>"; };
-		117E70CD297AF26500C17F9F /* cof2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cof2.mp4; sourceTree = "<group>"; };
+		117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionCell.swift; sourceTree = "<group>"; };
 		119E829D2977EEE9007D6A44 /* Drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119E82A02977EEE9007D6A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119E82A22977EEE9007D6A44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +47,8 @@
 		119E82BE29780A3D007D6A44 /* DrinkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkitView.swift; sourceTree = "<group>"; };
 		119E82C0297812C5007D6A44 /* LoginViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewButton.swift; sourceTree = "<group>"; };
 		119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmnetControl.swift; sourceTree = "<group>"; };
+		11C43163297FFF4700DB944C /* ShoppingCartViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewControllers.swift; sourceTree = "<group>"; };
+		11D62761297D7A5C00A7C818 /* drip.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip.MP4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119E82C629781C19007D6A44 /* DTPagerController in Frameworks */,
 				119E82B62978075E007D6A44 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */,
+				117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */,
 				1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */,
 				1162E10C29797A1C00F97DE4 /* Row.swift */,
 			);
@@ -100,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				119E829F2977EEE9007D6A44 /* Drinkit */,
-				117E70CC297AF26500C17F9F /* cof1.mp4 */,
-				117E70CD297AF26500C17F9F /* cof2.mp4 */,
+				11D62761297D7A5C00A7C818 /* drip.MP4 */,
+				11277F75297ECE7900875127 /* drip2.MP4 */,
 				119E829E2977EEE9007D6A44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			children = (
 				119E82A42977EEE9007D6A44 /* MainViewController.swift */,
 				117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */,
+				11C43163297FFF4700DB944C /* ShoppingCartViewControllers.swift */,
 			);
 			path = ViewContainers;
 			sourceTree = "<group>";
@@ -191,7 +195,6 @@
 			name = Drinkit;
 			packageProductDependencies = (
 				119E82B52978075E007D6A44 /* SnapKit */,
-				119E82C529781C19007D6A44 /* DTPagerController */,
 			);
 			productName = Drinkit;
 			productReference = 119E829D2977EEE9007D6A44 /* Drinkit.app */;
@@ -223,7 +226,6 @@
 			mainGroup = 119E82942977EEE9007D6A44;
 			packageReferences = (
 				119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				119E82C429781C19007D6A44 /* XCRemoteSwiftPackageReference "DTPagerController" */,
 			);
 			productRefGroup = 119E829E2977EEE9007D6A44 /* Products */;
 			projectDirPath = "";
@@ -239,8 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				117E70CE297AF26500C17F9F /* cof1.mp4 in Resources */,
-				117E70CF297AF26500C17F9F /* cof2.mp4 in Resources */,
+				11277F76297ECE7900875127 /* drip2.MP4 in Resources */,
+				11D62762297D7A5C00A7C818 /* drip.MP4 in Resources */,
 				119E82AD2977EEE9007D6A44 /* LaunchScreen.storyboard in Resources */,
 				119E82AA2977EEE9007D6A44 /* Assets.xcassets in Resources */,
 			);
@@ -259,9 +261,11 @@
 				119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */,
 				117E70BE297ABA5D00C17F9F /* AutorizationViewController.swift in Sources */,
 				119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */,
+				11C43164297FFF4700DB944C /* ShoppingCartViewControllers.swift in Sources */,
 				119E82A52977EEE9007D6A44 /* MainViewController.swift in Sources */,
 				119E82C329781C01007D6A44 /* CustomSegmnetControl.swift in Sources */,
 				1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */,
+				117E70D1297AF7C800C17F9F /* CoffeeCollectionCell.swift in Sources */,
 				119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */,
 				119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */,
 				119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */,
@@ -482,14 +486,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		119E82C429781C19007D6A44 /* XCRemoteSwiftPackageReference "DTPagerController" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tungvoduc/DTPagerController";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -497,11 +493,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		119E82C529781C19007D6A44 /* DTPagerController */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 119E82C429781C19007D6A44 /* XCRemoteSwiftPackageReference "DTPagerController" */;
-			productName = DTPagerController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

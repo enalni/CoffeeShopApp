@@ -26,10 +26,7 @@ class MainViewController: UIViewController {
 private extension MainViewController {
     func initiliaze() {
         
-        view.backgroundColor = UIColor(named: "backroundColor")
         navigationItem.leftBarButtonItems = makeLeftBarButtonItem()
-//        navigationController?.navigationBar.backgroundColor = .systemGray2
-        navigationController?.navigationBar.alpha = 0.5
         navigationItem.rightBarButtonItem = makeRightBarButtonItem()
         
         view.addSubviews(avPlayerView)
@@ -39,14 +36,14 @@ private extension MainViewController {
         avPlayerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            customSegmnetControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
-            customSegmnetControl.leftAnchor.constraint(equalTo: view.leftAnchor),
-            customSegmnetControl.rightAnchor.constraint(equalTo: view.rightAnchor),
-            customSegmnetControl.heightAnchor.constraint(equalToConstant: 50),
+            customSegmnetControl.topAnchor.constraint(equalTo: avPlayerView.topAnchor),
+            customSegmnetControl.leftAnchor.constraint(equalTo: avPlayerView.leftAnchor),
+            customSegmnetControl.rightAnchor.constraint(equalTo: avPlayerView.rightAnchor),
+            customSegmnetControl.heightAnchor.constraint(equalToConstant: view.bounds.height/6),
             
-            avPlayerView.topAnchor.constraint(equalTo: customSegmnetControl.bottomAnchor, constant: 5),
-            avPlayerView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            avPlayerView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            avPlayerView.topAnchor.constraint(equalTo: view.topAnchor),
+            avPlayerView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -50),
+            avPlayerView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 50),
             avPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
 
@@ -59,7 +56,18 @@ private extension MainViewController {
     
     func makeRightBarButtonItem() -> UIBarButtonItem {
         let loginView = UIBarButtonItem(customView: LoginViewButton())
+        let taped = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        loginView.customView?.addGestureRecognizer(taped)
         return loginView
     }
+    
+    @objc func handleTap(_ sender: UIGestureRecognizer) {
+        if sender.state == .ended {
+            let vc = AutorizationViewController()
+            vc.modalPresentationStyle = .popover
+            present(vc, animated: true)
+            dismiss(animated: true)
+        }
+   }
 }
 

@@ -72,8 +72,10 @@ class DrinkitView: UIView {
 //MARK: - Private methods
 private extension DrinkitView {
     func initialize() {
-        
         addSubviews(xStackView)
+        
+//        addBlurredBackground(style: .systemUltraThinMaterialDark)
+
         
         imageView.snp.makeConstraints { make in
             make.width.equalTo(UIConstants.logoWidth)

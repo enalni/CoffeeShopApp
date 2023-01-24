@@ -27,7 +27,7 @@ private extension CustomSegmnetControl {
     func initialize() {
         let layot = TagFlowLayout()
         layot.scrollDirection = .horizontal
-        layot.estimatedItemSize = CGSize(width: 140, height: 40)
+        layot.estimatedItemSize = CGSize(width: 50, height: 40)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layot)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -36,12 +36,14 @@ private extension CustomSegmnetControl {
         collectionView.register(SegmentControlCollectionCell.self, forCellWithReuseIdentifier: String(describing: SegmentControlCollectionCell.self))
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
+        addBlurredBackground(style: .systemUltraThinMaterialDark)
+        
         addSubview(collectionView)
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            collectionView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            collectionView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            collectionView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
+            collectionView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -45),
             collectionView.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
@@ -64,6 +66,6 @@ extension CustomSegmnetControl: UICollectionViewDataSource{
 //MARK: - UICollectionViewDelegate
 extension CustomSegmnetControl: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("TAPED - \(indexPath.item)")
+        print("TAPED")
     }
 }

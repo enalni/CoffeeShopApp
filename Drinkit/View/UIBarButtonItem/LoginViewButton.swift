@@ -46,21 +46,31 @@ class LoginViewButton: UIView {
         stack.spacing = 1
         return stack
     }()
+    
+    private let customView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
 }
 
 //MARK: - Private methods
 private extension LoginViewButton {
     func initialize() {
-        addSubview(xStack)
+        addSubview(customView)
+        customView.addSubview(xStack)
+        
+        customView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         xStack.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(10)
         }
-        
+
         layer.cornerRadius = 15
         clipsToBounds = true
-        backgroundColor = UIColor(named: "colorButton")
+        customView.backgroundColor = UIColor(named: "loginButtonColor")
         tintColor = .white
-        
-        self.isUserInteractionEnabled = true
     }
 }

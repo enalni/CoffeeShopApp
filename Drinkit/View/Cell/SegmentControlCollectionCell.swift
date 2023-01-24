@@ -32,6 +32,7 @@ class SegmentControlCollectionCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
 }
 //MARK: - Private Methods
 private extension SegmentControlCollectionCell {
