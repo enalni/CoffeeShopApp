@@ -15,6 +15,32 @@ class MainViewController: UIViewController {
     let customSegmnetControl = CustomSegmnetControl()
     let avPlayerView = AVPlayerView()
     
+    private lazy var scroll: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.frame = self.view.bounds
+        scroll.contentSize = contentSize
+        scroll.backgroundColor = .clear
+        scroll.alpha = 0.4
+        scroll.showsVerticalScrollIndicator = false
+//        scroll.contentInset = UIEdgeInsets(top: 0, left: 13, bottom: 13, right: 13)
+        return scroll
+    }()
+    
+    
+    private lazy var contentView: UIView = {
+        let contentView = UIView()
+        contentView.backgroundColor = .clear
+        contentView.frame.size = contentSize
+        return contentView
+    }()
+    
+    private var contentSize: CGSize {
+        CGSize(width: view.frame.width,
+               height: view.frame.height)
+    }
+    
+    private var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initiliaze()
@@ -29,8 +55,21 @@ private extension MainViewController {
         navigationItem.leftBarButtonItems = makeLeftBarButtonItem()
         navigationItem.rightBarButtonItem = makeRightBarButtonItem()
         
+        let layot = UICollectionViewFlowLayout()
+        layot.scrollDirection = .vertical
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layot)
+        collectionView.register(CoffeeCollectionCell.self, forCellWithReuseIdentifier: String(describing: CoffeeCollectionCell.self))
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .systemYellow
+        
         view.addSubviews(avPlayerView)
         avPlayerView.addSubview(customSegmnetControl)
+        
+//        view.addSubview(scroll)
+//        scroll.addSubview(contentView)
+//        contentView.addSubview(collectionView)
         
         customSegmnetControl.translatesAutoresizingMaskIntoConstraints = false
         avPlayerView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,9 +81,20 @@ private extension MainViewController {
             customSegmnetControl.heightAnchor.constraint(equalToConstant: view.bounds.height/6),
             
             avPlayerView.topAnchor.constraint(equalTo: view.topAnchor),
-            avPlayerView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -50),
-            avPlayerView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 50),
+            avPlayerView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            avPlayerView.rightAnchor.constraint(equalTo: view.rightAnchor),
             avPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+//            contentView.topAnchor.constraint(equalTo: scroll.topAnchor),
+//            contentView.leadingAnchor.constraint(equalTo: scroll.leadingAnchor),
+//            contentView.trailingAnchor.constraint(equalTo: scroll.trailingAnchor),
+//            contentView.bottomAnchor.constraint(equalTo: scroll.bottomAnchor),
+//            contentView.widthAnchor.constraint(equalTo: scroll.widthAnchor),
+//
+//            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: view.bounds.height/3),
+//            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+//            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
 
     }
@@ -69,5 +119,21 @@ private extension MainViewController {
             dismiss(animated: true)
         }
    }
+}
+
+//MARK: - UICollectionViewDataSource
+extension MainViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CoffeeCollectionCell.self), for: indexPath) as? CoffeeCollectionCell else {return UICollectionViewCell()}
+        //        cell.config()
+        return cell
+    }
+    
+    
 }
 

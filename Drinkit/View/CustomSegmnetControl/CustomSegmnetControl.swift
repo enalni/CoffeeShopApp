@@ -42,8 +42,8 @@ private extension CustomSegmnetControl {
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            collectionView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
-            collectionView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -45),
+            collectionView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            collectionView.rightAnchor.constraint(equalTo: self.rightAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
