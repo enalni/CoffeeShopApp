@@ -67,18 +67,25 @@ class DrinkitView: UIView {
         stack.spacing = UIConstants.xStackSpacing
         return stack
     }()
+    
+    private let customView: UIView = {
+        let view = UIView()
+        return view
+    }()
 }
 
 //MARK: - Private methods
 private extension DrinkitView {
     func initialize() {
-        addSubviews(xStackView)
-        
-//        addBlurredBackground(style: .systemUltraThinMaterialDark)
+        addSubview(customView)
+        customView.addSubview(xStackView)
 
-        
         imageView.snp.makeConstraints { make in
             make.width.equalTo(UIConstants.logoWidth)
+        }
+        
+        customView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
         
         xStackView.snp.makeConstraints { make in

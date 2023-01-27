@@ -11,6 +11,8 @@
 		1162E10B29797A0B00F97DE4 /* TagFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */; };
 		1162E10D29797A1C00F97DE4 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10C29797A1C00F97DE4 /* Row.swift */; };
 		1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */; };
+		1173192829829139009518F4 /* CoffeeShopLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */; };
+		1173192B2982B7BD009518F4 /* FittedSheets in Frameworks */ = {isa = PBXBuildFile; productRef = 1173192A2982B7BD009518F4 /* FittedSheets */; };
 		117E70BE297ABA5D00C17F9F /* AutorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */; };
 		117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70C2297ADA7300C17F9F /* AVPlayerView.swift */; };
 		117E70D1297AF7C800C17F9F /* CoffeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */; };
@@ -25,6 +27,7 @@
 		119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C0297812C5007D6A44 /* LoginViewButton.swift */; };
 		119E82C329781C01007D6A44 /* CustomSegmnetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */; };
 		11C43164297FFF4700DB944C /* ShoppingCartViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C43163297FFF4700DB944C /* ShoppingCartViewControllers.swift */; };
+		11D494772983D6DB0072C6D0 /* CoffeeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */; };
 		11D62762297D7A5C00A7C818 /* drip.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 11D62761297D7A5C00A7C818 /* drip.MP4 */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,7 @@
 		1162E10A29797A0B00F97DE4 /* TagFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
 		1162E10C29797A1C00F97DE4 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlCollectionCell.swift; sourceTree = "<group>"; };
+		1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopLocationViewController.swift; sourceTree = "<group>"; };
 		117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewController.swift; sourceTree = "<group>"; };
 		117E70C2297ADA7300C17F9F /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
 		117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionCell.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 		119E82C0297812C5007D6A44 /* LoginViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewButton.swift; sourceTree = "<group>"; };
 		119E82C229781C01007D6A44 /* CustomSegmnetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmnetControl.swift; sourceTree = "<group>"; };
 		11C43163297FFF4700DB944C /* ShoppingCartViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewControllers.swift; sourceTree = "<group>"; };
+		11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewController.swift; sourceTree = "<group>"; };
 		11D62761297D7A5C00A7C818 /* drip.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip.MP4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1173192B2982B7BD009518F4 /* FittedSheets in Frameworks */,
 				119E82B62978075E007D6A44 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				119E82A42977EEE9007D6A44 /* MainViewController.swift */,
+				11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */,
+				1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */,
 				117E70BD297ABA5D00C17F9F /* AutorizationViewController.swift */,
 				11C43163297FFF4700DB944C /* ShoppingCartViewControllers.swift */,
 			);
@@ -195,6 +203,7 @@
 			name = Drinkit;
 			packageProductDependencies = (
 				119E82B52978075E007D6A44 /* SnapKit */,
+				1173192A2982B7BD009518F4 /* FittedSheets */,
 			);
 			productName = Drinkit;
 			productReference = 119E829D2977EEE9007D6A44 /* Drinkit.app */;
@@ -226,6 +235,7 @@
 			mainGroup = 119E82942977EEE9007D6A44;
 			packageReferences = (
 				119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				117319292982B7BD009518F4 /* XCRemoteSwiftPackageReference "FittedSheets" */,
 			);
 			productRefGroup = 119E829E2977EEE9007D6A44 /* Products */;
 			projectDirPath = "";
@@ -255,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1173192829829139009518F4 /* CoffeeShopLocationViewController.swift in Sources */,
 				117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */,
+				11D494772983D6DB0072C6D0 /* CoffeeCollectionViewController.swift in Sources */,
 				1162E10B29797A0B00F97DE4 /* TagFlowLayout.swift in Sources */,
 				1162E10D29797A1C00F97DE4 /* Row.swift in Sources */,
 				119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */,
@@ -478,6 +490,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		117319292982B7BD009518F4 /* XCRemoteSwiftPackageReference "FittedSheets" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gordontucker/FittedSheets";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -489,6 +509,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1173192A2982B7BD009518F4 /* FittedSheets */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 117319292982B7BD009518F4 /* XCRemoteSwiftPackageReference "FittedSheets" */;
+			productName = FittedSheets;
+		};
 		119E82B52978075E007D6A44 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 119E82B42978075E007D6A44 /* XCRemoteSwiftPackageReference "SnapKit" */;
