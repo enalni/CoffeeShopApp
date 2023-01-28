@@ -1,31 +1,28 @@
 //
-//  ViewController.swift
+//  SecondViewControllers.swift
 //  Drinkit
 //
-//  Created by Александр Николаевич on 18.01.2023.
-//
+//  Created by Александр Николаевич on 28.01.2023.
+
 
 import UIKit
-import SnapKit
-import FittedSheets
+import FloatingPanel
 
-class MainViewController: UIViewController {
-    
+class SecondViewControllers: UIViewController {
     
     //MARK: Private property
     private let customSegmnetControl = CustomSegmnetControl()
     private let avPlayerView = AVPlayerView()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initiliaze()
     }
-    
 }
 
 //MARK: - Private methods
-
-private extension MainViewController {
+private extension SecondViewControllers {
     func initiliaze() {
         
         navigationItem.leftBarButtonItems = makeLeftBarButtonItem()
@@ -69,7 +66,7 @@ private extension MainViewController {
             let vc = AutorizationViewController()
             vc.modalPresentationStyle = .popover
             present(vc, animated: true)
-            print("DEBUG: rightBarButtonItem taped")
+            print("DEBUG: TAPED rightBarButtonItem ")
         }
     }
     
@@ -78,7 +75,8 @@ private extension MainViewController {
             let vc = CoffeeShopLocationViewController()
             vc.modalPresentationStyle = .popover
             present(vc, animated: true)
-            print("DEBUG: leftBarButtonItem taped")
+            print("DEBUG: TAPED leftBarButtonItem")
         }
     }
 }
+

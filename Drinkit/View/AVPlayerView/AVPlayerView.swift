@@ -7,8 +7,16 @@
 
 import UIKit
 import AVKit
+import AudioToolbox
 
 class AVPlayerView: UIView {
+    //MARK: - Public func
+    func configure(with coffeHelpers: CoffeeHelper) {
+        self.nameCoffeeLabel.text = coffeHelpers.nameCoffee
+        configPriceButton(price: coffeHelpers.priceCoffee)
+        configPlayer(nameVideo: coffeHelpers.nameVideo)
+    }
+    
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,13 +33,13 @@ class AVPlayerView: UIView {
     }
     
     //MARK: - Private property
-     let playerViewController: AVPlayerViewController = {
+    let playerViewController: AVPlayerViewController = {
         let player = AVPlayerViewController()
         player.view.translatesAutoresizingMaskIntoConstraints = false
         return player
     }()
     
-    private let nameCoffeeLabel: UILabel = {
+    private var nameCoffeeLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(named: "nameCoffeeColorForLabel")
         label.text = "Дрип-пакет Эфиопия"
@@ -42,12 +50,11 @@ class AVPlayerView: UIView {
         return label
     }()
     
-    private let priceCoffeeButton: UIButton = {
+    private var priceCoffeeButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = UIConstants.cornerRadiusSet
         button.clipsToBounds = true
         button.backgroundColor = UIColor(named: "colorPriceCoffeeButton")
-        button.setTitle("+70 ₽", for: .normal)
         button.setTitleColor(UIColor(named: "colorText"), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         return button
@@ -57,6 +64,7 @@ class AVPlayerView: UIView {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = UIConstants.cornerRadiusSet
         button.clipsToBounds = true
+        let color = UIColor(named: "colorAddFlavorButton")?.cgColor
         button.backgroundColor = UIColor(named: "colorAddFlavorButton")
         button.setTitle(" вкус", for: .normal)
         button.tintColor = .white
@@ -122,14 +130,17 @@ class AVPlayerView: UIView {
 private extension AVPlayerView {
     func initialize() {
         
-        configPlayer()
         configShoppingCart()
-
+        configInfiniteLoopVideo()
+        
         addSubview(playerViewController.view)
         addSubview(nameCoffeeLabel)
         addSubview(xStackButtons)
         addSubview(shoppingCartView)
         shoppingCartView.addSubview(xStackShoppingCart)
+        
+        self.addFlavorButton.addTarget(self, action: #selector(tapedAddFlavorButton), for: .touchUpInside)
+        self.priceCoffeeButton.addTarget(self, action: #selector(tapedPriceCoffeeButton), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             playerViewController.view.topAnchor.constraint(equalTo: self.topAnchor),
@@ -147,7 +158,7 @@ private extension AVPlayerView {
             xStackButtons.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             xStackButtons.heightAnchor.constraint(equalToConstant: 55),
             
-            shoppingCartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70),
+            //            shoppingCartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 70),
             shoppingCartView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             shoppingCartView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
             shoppingCartView.heightAnchor.constraint(equalToConstant: 65),
@@ -159,19 +170,49 @@ private extension AVPlayerView {
         ])
     }
     
-    func configPlayer() {
-        guard let path = Bundle.main.path(forResource: "drip", ofType:"MP4") else {
+    func configPlayer(nameVideo: String) {
+        guard let path = Bundle.main.path(forResource: nameVideo, ofType:"MP4") else {
             debugPrint("video.m4v not found")
             return
         }
         let templItem = AVPlayerItem(url: URL(fileURLWithPath: path))
         let player = AVPlayer(playerItem: templItem)
         playerViewController.player = player
+        playerViewController.view.isUserInteractionEnabled = false
+        player.isMuted = true
         playerViewController.videoGravity = .resize
         player.play()
     }
     
     func configShoppingCart() {
         self.shoppingCartView.addBlurredBackground(style: .prominent)
+    }
+    
+    func configPriceButton(price: String) {
+        let price = " + \(price) ₽"
+        self.priceCoffeeButton.setTitle(price, for: .normal)
+    }
+    
+    func configInfiniteLoopVideo() {
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerViewController.player?.currentItem, queue: nil) { (_) in
+            self.playerViewController.player?.seek(to: CMTime.zero)
+            self.playerViewController.player?.play()
+        }
+    }
+    
+    @objc
+    func tapedAddFlavorButton () {
+        print("TAPED AddFlavorButton ")
+    }
+    
+    @objc
+    func tapedPriceCoffeeButton () {
+        print("TAPED priceCoffeeButton ")
+        let animator = UIViewPropertyAnimator(duration:1, curve: .easeInOut) {
+            self.shoppingCartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70).isActive = true
+        }
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
+        animator.startAnimation()
     }
 }

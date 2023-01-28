@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CoffeeCollectionCell: UICollectionViewCell {
     
@@ -28,14 +29,15 @@ class CoffeeCollectionCell: UICollectionViewCell {
     //MARK: - Private constraint
     private enum UIConstants {
         static let sizeFontnameCoffeeLabel: CGFloat = 20
-        static let mockPriceInpriceCoffeeLabel: CGFloat = 150
+        static let mockPriceInpriceCoffeeLabel: Int = Int.random(in: 80...150)
     }
     
     //MARK: - Private Property
     
     private let coffeeImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "americano")
+        imageView.image = UIImage(named: "dripka")
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -50,17 +52,29 @@ class CoffeeCollectionCell: UICollectionViewCell {
     private let priceCoffeeLabel: UILabel = {
         let label = UILabel()
         label.text = "\(UIConstants.mockPriceInpriceCoffeeLabel) ₽"
+        label.textColor = UIColor(named: "colorText")
+        label.font = UIFont.boldSystemFont(ofSize: 25)
         return label
     }()
     
     private let fullInformationChevronButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.setTitle("+", for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = .systemBlue
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        button.layer.cornerRadius = 15
+        button.clipsToBounds = true
+        button.titleLabel?.textAlignment = .center
         return button
     }()
     
     private lazy var xStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [priceCoffeeLabel, fullInformationChevronButton])
+        stackView.axis = .horizontal
+        stackView.contentMode = .scaleAspectFit
+        stackView.spacing = 2
+        stackView.distribution = .fill
         return stackView
     }()
     
@@ -69,18 +83,31 @@ class CoffeeCollectionCell: UICollectionViewCell {
         stackView.axis = .vertical
         return stackView
     }()
+    
+    private let conteinerView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 20
+        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFit
+        view.backgroundColor = .clear
+        view.addBlurredBackground(style: .systemChromeMaterialDark)
+        return view
+    }()
 }
 
 //MARK: - Private methods
 private extension CoffeeCollectionCell {
     func initialize() {
-        addSubviews(yStack)
         
-        NSLayoutConstraint.activate([
-            yStack.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 8),
-            yStack.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8),
-            yStack.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -8),
-            yStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
-        ])
+        conteinerView.addSubview(yStack)
+        contentView.addSubview(conteinerView)
+        
+        yStack.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(10)
+        }
+        
+        conteinerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }

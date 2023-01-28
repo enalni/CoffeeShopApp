@@ -25,7 +25,7 @@ class CustomSegmnetControl: UIView {
 
 private extension CustomSegmnetControl {
     func initialize() {
-        let layot = TagFlowLayout()
+        let layot = SegmentControlFlowLayout()
         layot.scrollDirection = .horizontal
         layot.estimatedItemSize = CGSize(width: 50, height: 40)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layot)

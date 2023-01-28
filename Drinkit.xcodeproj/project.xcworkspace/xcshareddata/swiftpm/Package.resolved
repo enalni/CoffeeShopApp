@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "fittedsheets",
+      "identity" : "floatingpanel",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/gordontucker/FittedSheets",
+      "location" : "https://github.com/scenee/FloatingPanel",
       "state" : {
-        "revision" : "3dcebb20ff42f644e9474a198acb886d4bd51793",
-        "version" : "2.5.3"
+        "revision" : "4ab7d260301ddf1cab5376ea14e285a128f5ba39",
+        "version" : "2.5.5"
       }
     },
     {

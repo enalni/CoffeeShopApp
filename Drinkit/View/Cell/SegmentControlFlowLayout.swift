@@ -7,19 +7,19 @@
 
 import UIKit
 
-class TagFlowLayout: UICollectionViewFlowLayout {
+class SegmentControlFlowLayout: UICollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let attributes = super.layoutAttributesForElements(in: rect) else {
             return nil
         }
 
-        var rows = [Row]()
+        var rows = [RowCollectionViewLayoutAttributes]()
         var currentRowY: CGFloat = -1
 
         for attribute in attributes {
             if currentRowY != attribute.frame.origin.y {
                 currentRowY = attribute.frame.origin.y
-                rows.append(Row(spacing: 10))
+                rows.append(RowCollectionViewLayoutAttributes(spacing: 10))
             }
             rows.last?.add(attribute: attribute)
         }
