@@ -7,6 +7,6 @@
 
 import UIKit
  
-class CoffeeCompositionalLayout: UICollectionViewCompositionalLayout {
+final class CoffeeCompositionalLayout: UICollectionViewCompositionalLayout {
 
 }

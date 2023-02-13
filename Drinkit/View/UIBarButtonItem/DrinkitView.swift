@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import SnapKit
 
-class DrinkitView: UIView {
+final class DrinkitView: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +26,8 @@ class DrinkitView: UIView {
         static let xStackSpacing: CGFloat = 3
         static let xStackWidth: CGFloat = 150
         static let xStackHeight: CGFloat = 50
+        static let sizeCityLabel: CGFloat = 19
+        static let sizeOpeningHoursLabel: CGFloat = 15
     }
     
     //MARK: - Private property
@@ -35,13 +36,14 @@ class DrinkitView: UIView {
         imageView.image = UIImage(named: "drinkitLogo")
         imageView.layer.cornerRadius = UIConstants.logoWidth/2
         imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private let cityLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(named: "colorText")
-        label.font = .boldSystemFont(ofSize: 18)
+        label.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeCityLabel)
         label.text = "Москва"
         return label
     }()
@@ -50,6 +52,7 @@ class DrinkitView: UIView {
         let label = UILabel()
         label.text = "до 22:00"
         label.font = .systemFont(ofSize: 15)
+        label.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeOpeningHoursLabel)
         label.textColor = UIColor(named: "colorOpenTime")
         return label
     }()
@@ -65,11 +68,13 @@ class DrinkitView: UIView {
         let stack = UIStackView(arrangedSubviews: [imageView, yStackView])
         stack.axis = .horizontal
         stack.spacing = UIConstants.xStackSpacing
+        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
     private let customView: UIView = {
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 }
@@ -79,17 +84,19 @@ private extension DrinkitView {
     func initialize() {
         addSubview(customView)
         customView.addSubview(xStackView)
+        
+        NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalToConstant: UIConstants.logoWidth),
 
-        imageView.snp.makeConstraints { make in
-            make.width.equalTo(UIConstants.logoWidth)
-        }
-        
-        customView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        xStackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+            customView.topAnchor.constraint(equalTo: self.topAnchor),
+            customView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            customView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            customView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            
+            xStackView.topAnchor.constraint(equalTo: customView.topAnchor),
+            xStackView.leadingAnchor.constraint(equalTo: customView.leadingAnchor),
+            xStackView.trailingAnchor.constraint(equalTo: customView.trailingAnchor),
+            xStackView.bottomAnchor.constraint(equalTo: customView.bottomAnchor),
+        ])
     }
 }

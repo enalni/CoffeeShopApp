@@ -7,14 +7,13 @@
 
 import UIKit
 import AVKit
-import AudioToolbox
 
-class AVPlayerView: UIView {
+final class AVPlayerView: UIView {
     //MARK: - Public func
-    func configure(with coffeHelpers: CoffeeHelper) {
-        self.nameCoffeeLabel.text = coffeHelpers.nameCoffee
-        configPriceButton(price: coffeHelpers.priceCoffee)
-        configPlayer(nameVideo: coffeHelpers.nameVideo)
+    func configure(with coffeHelpers: CoffeeViewModel) {
+        self.nameCoffeeLabel.text = coffeHelpers.coffeeName
+        configPriceButton(price: coffeHelpers.coffeePrice)
+        configPlayer(nameVideo: coffeHelpers.videoFileName)
     }
     
     //MARK: - Init
@@ -29,7 +28,25 @@ class AVPlayerView: UIView {
     
     //MARK: - Private constraint
     private enum UIConstants {
-        static let cornerRadiusSet: CGFloat =  30
+        
+        static let cornerRadiusSet: CGFloat =  25
+        static let leadingSet: CGFloat = 16
+        static let trailingSet: CGFloat = -16
+        
+        static let sizeFontNameCoffeeLabel: CGFloat = 32
+        static let sizeFontPriceCoffeeButton: CGFloat = 30
+        static let sizeFontAddFlavorButton: CGFloat = 30
+        static let sizeFontShoppingCardSummaLabel: CGFloat = 25
+        
+        static let spacingXStackButtons: CGFloat = 15
+        
+        static let countNumberOfLines: Int = 0
+        
+        static let heightNameCoffeeLabel: CGFloat = 60
+        static let heightXStackButtons: CGFloat = 60
+        
+        static let bottomNameCoffeeLabel: CGFloat = -220
+        static let bottomXStackButtons: CGFloat = -160
     }
     
     //MARK: - Private property
@@ -43,9 +60,9 @@ class AVPlayerView: UIView {
         let label = UILabel()
         label.textColor = UIColor(named: "nameCoffeeColorForLabel")
         label.text = "Дрип-пакет Эфиопия"
-        label.font = UIFont.boldSystemFont(ofSize: 35)
+        label.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeFontNameCoffeeLabel)
         label.contentMode = .center
-        label.numberOfLines = 0
+        label.numberOfLines = UIConstants.countNumberOfLines
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -56,21 +73,27 @@ class AVPlayerView: UIView {
         button.clipsToBounds = true
         button.backgroundColor = UIColor(named: "colorPriceCoffeeButton")
         button.setTitleColor(UIColor(named: "colorText"), for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        button.titleLabel?.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeFontPriceCoffeeButton)
         return button
     }()
     
+    private let gradienLayer: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        let colors = [UIColor.purple.cgColor, UIColor.systemYellow.cgColor]
+        gradient.colors = colors
+        return gradient
+    }()
+        
     private let addFlavorButton: UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = UIConstants.cornerRadiusSet
         button.clipsToBounds = true
         let color = UIColor(named: "colorAddFlavorButton")?.cgColor
-        button.backgroundColor = UIColor(named: "colorAddFlavorButton")
         button.setTitle(" вкус", for: .normal)
         button.tintColor = .white
         let image = UIImage(systemName: "wand.and.stars")
+        button.titleLabel?.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeFontAddFlavorButton)
         button.setImage(image, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         return button
     }()
     
@@ -79,68 +102,28 @@ class AVPlayerView: UIView {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 15
+        stackView.spacing = UIConstants.spacingXStackButtons
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
-    private let shoppingCartView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = UIConstants.cornerRadiusSet
-        view.clipsToBounds = true
-        view.addBlurredBackground(style: .systemChromeMaterialDark)
-        return view
-    }()
-    
-    private let shoppingCardSummaLabel: UILabel = {
-        let label = UILabel()
-        label.text = "+70 ₽"
-        label.contentMode = .center
-        label.textColor = UIColor(named: "colorText")
-        label.font = UIFont.boldSystemFont(ofSize: 25)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let imageViewShoppingCar: UIImageView = {
-        let imageView =  UIImageView()
-        let image = UIImage(named: "americano")
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 30
-        imageView.clipsToBounds = true
-        imageView.backgroundColor = UIColor(named: "colorShoppingCartImageView")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    private lazy var xStackShoppingCart: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [shoppingCardSummaLabel, imageViewShoppingCar])
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.spacing = 10
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
-    }()
+    override func layoutSubviews() {
+        configGradient()
+    }
     
 }
 //MARK: - Private methods
 private extension AVPlayerView {
     func initialize() {
         
-        configShoppingCart()
         configInfiniteLoopVideo()
         
         addSubview(playerViewController.view)
         addSubview(nameCoffeeLabel)
         addSubview(xStackButtons)
-        addSubview(shoppingCartView)
-        shoppingCartView.addSubview(xStackShoppingCart)
         
-        self.addFlavorButton.addTarget(self, action: #selector(tapedAddFlavorButton), for: .touchUpInside)
-        self.priceCoffeeButton.addTarget(self, action: #selector(tapedPriceCoffeeButton), for: .touchUpInside)
+        addFlavorButton.addTarget(self, action: #selector(tappedAddFlavorButton), for: .touchUpInside)
+        priceCoffeeButton.addTarget(self, action: #selector(tappedPriceCoffeeButton(sender:)), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             playerViewController.view.topAnchor.constraint(equalTo: self.topAnchor),
@@ -148,25 +131,15 @@ private extension AVPlayerView {
             playerViewController.view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             playerViewController.view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            nameCoffeeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -200),
-            nameCoffeeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            nameCoffeeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            nameCoffeeLabel.heightAnchor.constraint(equalToConstant: 100),
+            nameCoffeeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: UIConstants.bottomNameCoffeeLabel),
+            nameCoffeeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: UIConstants.leadingSet),
+            nameCoffeeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: UIConstants.trailingSet),
+            nameCoffeeLabel.heightAnchor.constraint(equalToConstant: UIConstants.heightNameCoffeeLabel),
             
-            xStackButtons.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -150),
-            xStackButtons.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            xStackButtons.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            xStackButtons.heightAnchor.constraint(equalToConstant: 55),
-            
-            //            shoppingCartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 70),
-            shoppingCartView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
-            shoppingCartView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
-            shoppingCartView.heightAnchor.constraint(equalToConstant: 65),
-            
-            xStackShoppingCart.topAnchor.constraint(equalTo: shoppingCartView.topAnchor, constant: 5),
-            xStackShoppingCart.leadingAnchor.constraint(equalTo: shoppingCartView.leadingAnchor,constant: 10),
-            xStackShoppingCart.trailingAnchor.constraint(equalTo: shoppingCartView.trailingAnchor, constant: -5),
-            xStackShoppingCart.bottomAnchor.constraint(equalTo: shoppingCartView.bottomAnchor, constant: -5),
+            xStackButtons.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: UIConstants.bottomXStackButtons),
+            xStackButtons.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: UIConstants.leadingSet),
+            xStackButtons.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: UIConstants.trailingSet),
+            xStackButtons.heightAnchor.constraint(equalToConstant: UIConstants.heightXStackButtons),
         ])
     }
     
@@ -184,9 +157,7 @@ private extension AVPlayerView {
         player.play()
     }
     
-    func configShoppingCart() {
-        self.shoppingCartView.addBlurredBackground(style: .prominent)
-    }
+    
     
     func configPriceButton(price: String) {
         let price = " + \(price) ₽"
@@ -200,19 +171,18 @@ private extension AVPlayerView {
         }
     }
     
-    @objc
-    func tapedAddFlavorButton () {
-        print("TAPED AddFlavorButton ")
+    func configGradient() {
+        gradienLayer.frame = addFlavorButton.bounds
+        addFlavorButton.layer.insertSublayer(gradienLayer, at: 0)
     }
     
     @objc
-    func tapedPriceCoffeeButton () {
-        print("TAPED priceCoffeeButton ")
-        let animator = UIViewPropertyAnimator(duration:1, curve: .easeInOut) {
-            self.shoppingCartView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70).isActive = true
-        }
-        let generator = UISelectionFeedbackGenerator()
-        generator.selectionChanged()
-        animator.startAnimation()
+    func tappedAddFlavorButton () {
+        print("TAPPED AddFlavorButton ")
+    }
+    
+    @objc
+    func tappedPriceCoffeeButton (sender: UIButton) {
+        print("TAPPED priceCoffeeButton ")
     }
 }

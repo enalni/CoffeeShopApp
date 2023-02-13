@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AVPlayerViewController.swift
 //  Drinkit
 //
 //  Created by Александр Николаевич on 18.01.2023.
@@ -8,11 +8,11 @@
 import UIKit
 import FloatingPanel
 
-class MainViewController: UIViewController {
+final class AVPlayerViewViewController: UIViewController {
     
-    private var avPlayerView = AVPlayerView()
+    var avPlayerView = AVPlayerView()
     
-    init(with coffeHelper: CoffeeHelper) {
+    init(with coffeHelper: CoffeeViewModel) {
         super.init(nibName: nil, bundle: nil)
         initiliaze()
         self.avPlayerView.configure(with: coffeHelper)
@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
 }
 
 //MARK: - Private methods
-private extension MainViewController {
+private extension AVPlayerViewViewController {
     func initiliaze() {
     
         view.addSubview(avPlayerView)
@@ -33,8 +33,8 @@ private extension MainViewController {
         
         NSLayoutConstraint.activate([
             avPlayerView.topAnchor.constraint(equalTo: view.topAnchor),
-            avPlayerView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            avPlayerView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            avPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            avPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             avPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }

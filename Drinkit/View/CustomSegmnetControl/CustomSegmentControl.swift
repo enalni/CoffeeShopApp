@@ -1,5 +1,5 @@
 //
-//  CustomSegmnetControl.swift
+//  CustomSegmentControl.swift
 //  Drinkit
 //
 //  Created by Александр Николаевич on 18.01.2023.
@@ -7,11 +7,18 @@
 
 import UIKit
 
-class CustomSegmnetControl: UIView {
+final class CustomSegmentControl: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
+    }
+    
+    //MARK: - Private constraint
+    private enum UIConstants {
+        static let sizeItemHeight: CGFloat = 40
+        static let sizeItemWidth: CGFloat = 50
+        static let heightConstraintsCollection: CGFloat = 40
     }
     
     required init?(coder: NSCoder) {
@@ -23,12 +30,13 @@ class CustomSegmnetControl: UIView {
     let items = ["💙мой дринкит", "зима","кофе","не кофе","еда","сладкое","забери с собой"]
 }
 
-private extension CustomSegmnetControl {
+private extension CustomSegmentControl {
     func initialize() {
-        let layot = SegmentControlFlowLayout()
-        layot.scrollDirection = .horizontal
-        layot.estimatedItemSize = CGSize(width: 50, height: 40)
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layot)
+        let layout = SegmentControlFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = CGSize(width: UIConstants.sizeItemWidth,
+                                         height: UIConstants.sizeItemHeight)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .clear
@@ -42,15 +50,15 @@ private extension CustomSegmnetControl {
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            collectionView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            collectionView.rightAnchor.constraint(equalTo: self.rightAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 40)
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: UIConstants.heightConstraintsCollection)
         ])
     }
 }
 
 // MARK: - UICollectionViewDataSource
-extension CustomSegmnetControl: UICollectionViewDataSource{
+extension CustomSegmentControl: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         items.count
@@ -64,8 +72,8 @@ extension CustomSegmnetControl: UICollectionViewDataSource{
 }
 
 //MARK: - UICollectionViewDelegate
-extension CustomSegmnetControl: UICollectionViewDelegate {
+extension CustomSegmentControl: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("TAPED")
+        print("TAPPED")
     }
 }

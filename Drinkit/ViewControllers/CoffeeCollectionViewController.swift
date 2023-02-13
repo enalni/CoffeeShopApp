@@ -6,11 +6,16 @@
 //
 
 import UIKit
-import SnapKit
 
-class CoffeeCollectionViewController: UIViewController {
+final class CoffeeCollectionViewController: UIViewController {
     //MARK: Private property
     var collectionView: UICollectionView!
+    
+    //MARK: - Private constraint
+    private enum UIConstants {
+        static let collectionTopAndLeading: CGFloat = 10
+        static let collectionTrailingAndBottom: CGFloat = -10
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,22 +26,25 @@ class CoffeeCollectionViewController: UIViewController {
 private extension CoffeeCollectionViewController {
     func initiliaze() {
         
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayot())
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.register(CoffeeCollectionCell.self, forCellWithReuseIdentifier: String(describing: CoffeeCollectionCell.self))
         
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
-        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(collectionView)
         
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(10)
-        }
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: UIConstants.collectionTopAndLeading),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIConstants.collectionTopAndLeading),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: UIConstants.collectionTrailingAndBottom),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: UIConstants.collectionTrailingAndBottom),
+        ])
     }
     
-    func createLayot() -> UICollectionViewLayout {
+    func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout(section: createSection())
         return layout
     }

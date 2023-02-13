@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import SnapKit
 
-class CoffeeShopLocationViewController: UIViewController {
+final class CoffeeShopLocationViewController: UIViewController {
     
     //MARK: Private property
     private let mockImageView: UIImageView = {
@@ -16,6 +15,7 @@ class CoffeeShopLocationViewController: UIViewController {
         let image = UIImage(named: "drinKitMockImageLocation")
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -32,9 +32,12 @@ private extension CoffeeShopLocationViewController {
     
         view.addSubviews(mockImageView)
         
-        mockImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        NSLayoutConstraint.activate([
+            mockImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            mockImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mockImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mockImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
     }
 }
 

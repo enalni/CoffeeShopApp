@@ -7,8 +7,8 @@
 
 import UIKit
 
-struct CoffeeHelper {
-    var nameCoffee = String()
-    var priceCoffee = String()
-    var nameVideo = String()
+struct CoffeeViewModel {
+    var coffeeName = ""
+    var coffeePrice = ""
+    var videoFileName = ""
 }
