@@ -27,4 +27,7 @@ final class RowCollectionViewLayoutAttributes {
             offset += Int(attribute.frame.width + spacing)
         }
     }
+    
+    
+    
 }

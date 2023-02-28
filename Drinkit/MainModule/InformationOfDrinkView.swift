@@ -6,17 +6,14 @@
 //
 
 import UIKit
-import AVKit
 
-final class AVPlayerView: UIView {
+final class InformationOfDrinkView: UIView {
     //MARK: - Public func
     func configure(with coffeHelpers: CoffeeViewModel) {
         self.nameCoffeeLabel.text = coffeHelpers.coffeeName
         configPriceButton(price: coffeHelpers.coffeePrice)
-        configPlayer(nameVideo: coffeHelpers.videoFileName)
     }
     
-    //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -26,6 +23,7 @@ final class AVPlayerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+
     //MARK: - Private constraint
     private enum UIConstants {
         
@@ -50,12 +48,7 @@ final class AVPlayerView: UIView {
     }
     
     //MARK: - Private property
-    let playerViewController: AVPlayerViewController = {
-        let player = AVPlayerViewController()
-        player.view.translatesAutoresizingMaskIntoConstraints = false
-        return player
-    }()
-    
+
     private var nameCoffeeLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(named: "nameCoffeeColorForLabel")
@@ -79,7 +72,7 @@ final class AVPlayerView: UIView {
     
     private let gradienLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
-        let colors = [UIColor.purple.cgColor, UIColor.systemYellow.cgColor]
+        let colors = [UIColor.systemOrange.cgColor, UIColor.systemYellow.cgColor]
         gradient.colors = colors
         return gradient
     }()
@@ -113,12 +106,10 @@ final class AVPlayerView: UIView {
     
 }
 //MARK: - Private methods
-private extension AVPlayerView {
+private extension InformationOfDrinkView {
     func initialize() {
         
-        configInfiniteLoopVideo()
-        
-        addSubview(playerViewController.view)
+        backgroundColor = .clear
         addSubview(nameCoffeeLabel)
         addSubview(xStackButtons)
         
@@ -126,11 +117,6 @@ private extension AVPlayerView {
         priceCoffeeButton.addTarget(self, action: #selector(tappedPriceCoffeeButton(sender:)), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            playerViewController.view.topAnchor.constraint(equalTo: self.topAnchor),
-            playerViewController.view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            playerViewController.view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            playerViewController.view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
             nameCoffeeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: UIConstants.bottomNameCoffeeLabel),
             nameCoffeeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: UIConstants.leadingSet),
             nameCoffeeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: UIConstants.trailingSet),
@@ -143,33 +129,11 @@ private extension AVPlayerView {
         ])
     }
     
-    func configPlayer(nameVideo: String) {
-        guard let path = Bundle.main.path(forResource: nameVideo, ofType:"MP4") else {
-            debugPrint("video.m4v not found")
-            return
-        }
-        let templItem = AVPlayerItem(url: URL(fileURLWithPath: path))
-        let player = AVPlayer(playerItem: templItem)
-        playerViewController.player = player
-        playerViewController.view.isUserInteractionEnabled = false
-        player.isMuted = true
-        playerViewController.videoGravity = .resize
-        player.play()
-    }
-    
-    
-    
     func configPriceButton(price: String) {
         let price = " + \(price) ₽"
         self.priceCoffeeButton.setTitle(price, for: .normal)
     }
     
-    func configInfiniteLoopVideo() {
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerViewController.player?.currentItem, queue: nil) { (_) in
-            self.playerViewController.player?.seek(to: CMTime.zero)
-            self.playerViewController.player?.play()
-        }
-    }
     
     func configGradient() {
         gradienLayer.frame = addFlavorButton.bounds

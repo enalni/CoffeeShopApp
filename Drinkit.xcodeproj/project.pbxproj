@@ -17,14 +17,12 @@
 		116E5FA229852A0B0092F2C6 /* RootPageViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */; };
 		116E5FA529852A960092F2C6 /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5FA429852A960092F2C6 /* CoffeeViewModel.swift */; };
 		1173192829829139009518F4 /* CoffeeShopLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */; };
-		117B89EB29965C5000F92C3B /* CustomAVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B89EA29965C5000F92C3B /* CustomAVPlayerViewController.swift */; };
 		117E70BE297ABA5D00C17F9F /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */; };
-		117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70C2297ADA7300C17F9F /* AVPlayerView.swift */; };
+		117E70C3297ADA7300C17F9F /* InformationOfDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */; };
 		117E70D1297AF7C800C17F9F /* CoffeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */; };
 		1188AF51298545C100947C87 /* coffee3.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 1188AF50298545C100947C87 /* coffee3.MP4 */; };
 		119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A02977EEE9007D6A44 /* AppDelegate.swift */; };
 		119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A22977EEE9007D6A44 /* SceneDelegate.swift */; };
-		119E82A52977EEE9007D6A44 /* AVPlayerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A42977EEE9007D6A44 /* AVPlayerViewViewController.swift */; };
 		119E82AA2977EEE9007D6A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119E82A92977EEE9007D6A44 /* Assets.xcassets */; };
 		119E82AD2977EEE9007D6A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119E82AB2977EEE9007D6A44 /* LaunchScreen.storyboard */; };
 		119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BB2978093A007D6A44 /* UIView + Extensions.swift */; };
@@ -35,8 +33,9 @@
 		11D494772983D6DB0072C6D0 /* CoffeeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */; };
 		11D494792983D9A10072C6D0 /* CoffeeCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D494782983D9A10072C6D0 /* CoffeeCompositionalLayout.swift */; };
 		11D62762297D7A5C00A7C818 /* drip.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 11D62761297D7A5C00A7C818 /* drip.MP4 */; };
+		11F3667329A63EC80023AE78 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */; };
+		11F3667529A64E560023AE78 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3667429A64E560023AE78 /* DrinkViewController.swift */; };
 		11FBA7F62995249600997608 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBA7F52995249600997608 /* UIViewController + Extensions.swift */; };
-		11FBA7FA299527D300997608 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBA7F9299527D300997608 /* ContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,15 +49,13 @@
 		116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewControllers.swift; sourceTree = "<group>"; };
 		116E5FA429852A960092F2C6 /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 		1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopLocationViewController.swift; sourceTree = "<group>"; };
-		117B89EA29965C5000F92C3B /* CustomAVPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAVPlayerViewController.swift; sourceTree = "<group>"; };
 		117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
-		117E70C2297ADA7300C17F9F /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationOfDrinkView.swift; sourceTree = "<group>"; };
 		117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionCell.swift; sourceTree = "<group>"; };
 		1188AF50298545C100947C87 /* coffee3.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = coffee3.MP4; sourceTree = "<group>"; };
 		119E829D2977EEE9007D6A44 /* Drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119E82A02977EEE9007D6A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119E82A22977EEE9007D6A44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		119E82A42977EEE9007D6A44 /* AVPlayerViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerViewViewController.swift; sourceTree = "<group>"; };
 		119E82A92977EEE9007D6A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119E82AC2977EEE9007D6A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		119E82AE2977EEE9007D6A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,8 +66,9 @@
 		11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewController.swift; sourceTree = "<group>"; };
 		11D494782983D9A10072C6D0 /* CoffeeCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCompositionalLayout.swift; sourceTree = "<group>"; };
 		11D62761297D7A5C00A7C818 /* drip.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip.MP4; sourceTree = "<group>"; };
+		11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		11F3667429A64E560023AE78 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		11FBA7F52995249600997608 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
-		11FBA7F9299527D300997608 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,14 +137,6 @@
 			path = CustomSegmnetControl;
 			sourceTree = "<group>";
 		};
-		117E70C1297ADA5700C17F9F /* AVPlayerView */ = {
-			isa = PBXGroup;
-			children = (
-				117E70C2297ADA7300C17F9F /* AVPlayerView.swift */,
-			);
-			path = AVPlayerView;
-			sourceTree = "<group>";
-		};
 		119E82942977EEE9007D6A44 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				119E82B7297807C3007D6A44 /* Application */,
-				119E82BD29780A2A007D6A44 /* View */,
-				119E82B8297807E4007D6A44 /* ViewControllers */,
+				11E971F129AE2C4300A17976 /* MainModule */,
+				11E971F029AE2C2B00A17976 /* LocationСoffeinModule */,
+				11E971EF29AE2BD900A17976 /* AuthorizationModule */,
 				119E82B9297807F1007D6A44 /* Resources */,
 				116E5FA329852A480092F2C6 /* Utilities */,
 				119E82BA2978091E007D6A44 /* Extensions */,
@@ -187,20 +178,6 @@
 				119E82A22977EEE9007D6A44 /* SceneDelegate.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		119E82B8297807E4007D6A44 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */,
-				119E82A42977EEE9007D6A44 /* AVPlayerViewViewController.swift */,
-				117B89EA29965C5000F92C3B /* CustomAVPlayerViewController.swift */,
-				11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */,
-				11FBA7F9299527D300997608 /* ContainerViewController.swift */,
-				1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */,
-				117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		119E82B9297807F1007D6A44 /* Resources */ = {
@@ -226,10 +203,54 @@
 			isa = PBXGroup;
 			children = (
 				1165461D29923938007C2D1A /* ShoppingCartView */,
-				117E70C1297ADA5700C17F9F /* AVPlayerView */,
 				117E70BA297AB9F800C17F9F /* Cell */,
 				117E70BB297ABA0500C17F9F /* UIBarButtonItem */,
 				117E70BC297ABA2F00C17F9F /* CustomSegmnetControl */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11E971EF29AE2BD900A17976 /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				11E971F229AE2C9600A17976 /* View */,
+			);
+			path = AuthorizationModule;
+			sourceTree = "<group>";
+		};
+		11E971F029AE2C2B00A17976 /* LocationСoffeinModule */ = {
+			isa = PBXGroup;
+			children = (
+				11E971F329AE2CDD00A17976 /* View */,
+			);
+			path = "LocationСoffeinModule";
+			sourceTree = "<group>";
+		};
+		11E971F129AE2C4300A17976 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */,
+				11F3667429A64E560023AE78 /* DrinkViewController.swift */,
+				11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */,
+				11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */,
+				117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */,
+				119E82BD29780A2A007D6A44 /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		11E971F229AE2C9600A17976 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11E971F329AE2CDD00A17976 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,20 +337,18 @@
 			files = (
 				1146AD9B29868FE000F63E78 /* FloatingPanelStocksLayout.swift in Sources */,
 				1173192829829139009518F4 /* CoffeeShopLocationViewController.swift in Sources */,
-				117E70C3297ADA7300C17F9F /* AVPlayerView.swift in Sources */,
-				117B89EB29965C5000F92C3B /* CustomAVPlayerViewController.swift in Sources */,
+				117E70C3297ADA7300C17F9F /* InformationOfDrinkView.swift in Sources */,
 				11D494792983D9A10072C6D0 /* CoffeeCompositionalLayout.swift in Sources */,
 				11D494772983D6DB0072C6D0 /* CoffeeCollectionViewController.swift in Sources */,
 				1162E10B29797A0B00F97DE4 /* SegmentControlFlowLayout.swift in Sources */,
 				1162E10D29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift in Sources */,
+				11F3667529A64E560023AE78 /* DrinkViewController.swift in Sources */,
 				119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */,
 				116E5FA529852A960092F2C6 /* CoffeeViewModel.swift in Sources */,
 				117E70BE297ABA5D00C17F9F /* AuthorizationViewController.swift in Sources */,
 				11FBA7F62995249600997608 /* UIViewController + Extensions.swift in Sources */,
 				119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */,
-				119E82A52977EEE9007D6A44 /* AVPlayerViewViewController.swift in Sources */,
 				119E82C329781C01007D6A44 /* CustomSegmentControl.swift in Sources */,
-				11FBA7FA299527D300997608 /* ContainerViewController.swift in Sources */,
 				1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */,
 				1165461F29923946007C2D1A /* ShoppingCartView.swift in Sources */,
 				116E5FA229852A0B0092F2C6 /* RootPageViewControllers.swift in Sources */,
@@ -337,6 +356,7 @@
 				119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */,
 				119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */,
 				119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */,
+				11F3667329A63EC80023AE78 /* VideoPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

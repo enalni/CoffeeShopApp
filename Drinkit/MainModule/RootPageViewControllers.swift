@@ -8,34 +8,42 @@
 import UIKit
 import FloatingPanel
 
+protocol AuthorizationViewControllerDelegate: AnyObject {
+    func authorizationViewControllerDidCancel(_controller: AuthorizationViewController)
+}
+
+protocol CustomSegmentControlTapedDelegate: AnyObject {
+    func collectionViewTaped(_ index: Int)
+}
+
 final class RootPageViewControllers: UIPageViewController {
     
     //MARK: Private property
     private let customSegmentControl: CustomSegmentControl = .init()
     private let shoppingCartView: ShoppingCartView = .init()
-    var coffeeHelpers = [CoffeeViewModel]()
-    private var shoppingCart = ""
+    var coffeeHelpers:[CoffeeViewModel] = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
         createMockCoffee()
+        initialize()
         makeFloatingPanelController()
     }
     
-    lazy var coffeeViewControllers: [AVPlayerViewViewController] = {
-        var arrayViewControllers = [AVPlayerViewViewController]()
-        for coffee in coffeeHelpers {
-            let vc = AVPlayerViewViewController(with: coffee)
-            arrayViewControllers.append(AVPlayerViewViewController(with: coffee))
+    lazy var coffeeViewControllers: [DrinkViewController] = {
+        var arrayViewControllers = [DrinkViewController]()
+        coffeeHelpers.forEach { coffee in
+            let viewController = DrinkViewController()
+            viewController.configure(coffee: coffee)
+            arrayViewControllers.append(viewController)
         }
         return arrayViewControllers
     }()
     
     override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
         super.init(transitionStyle: .scroll, navigationOrientation: navigationOrientation)
-        self.delegate = self
         view.addBlurredBackground(style: .systemUltraThinMaterialDark)
+        self.delegate = self
         self.dataSource = self
         setViewControllers([coffeeViewControllers[0]], direction: .forward, animated: true)
     }
@@ -48,16 +56,18 @@ final class RootPageViewControllers: UIPageViewController {
 //MARK: - Private extensions
 private extension RootPageViewControllers {
     func initialize() {
+        
         navigationItem.leftBarButtonItems = makeLeftBarButtonItem()
         navigationItem.rightBarButtonItem = makeRightBarButtonItem()
         
         view.addSubview(customSegmentControl)
         view.addSubview(shoppingCartView)
         
+        customSegmentControl.delegate = self
         
         customSegmentControl.translatesAutoresizingMaskIntoConstraints = false
         shoppingCartView.translatesAutoresizingMaskIntoConstraints = false
-            
+        
         NSLayoutConstraint.activate([
             customSegmentControl.topAnchor.constraint(equalTo: view.topAnchor),
             customSegmentControl.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -96,7 +106,7 @@ private extension RootPageViewControllers {
     @objc func rightButtonTapped(_ sender: UIGestureRecognizer) {
         if sender.state == .ended {
             let vc = AuthorizationViewController()
-            vc.modalPresentationStyle = .popover
+            vc.delegate = self
             present(vc, animated: true)
             debugPrint("DEBUG: TAPPED rightBarButtonItem ")
         }
@@ -105,7 +115,6 @@ private extension RootPageViewControllers {
     @objc func leftButtonTapped(_ sender: UIGestureRecognizer) {
         if sender.state == .ended {
             let vc = CoffeeShopLocationViewController()
-            vc.modalPresentationStyle = .popover
             present(vc, animated: true)
             debugPrint("DEBUG: TAPPED leftBarButtonItem")
         }
@@ -126,8 +135,6 @@ private extension RootPageViewControllers {
     }
 }
 
-
-
 // MARK: FloatingPanelControllerDelegate
 extension RootPageViewControllers: FloatingPanelControllerDelegate {
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout {
@@ -135,12 +142,11 @@ extension RootPageViewControllers: FloatingPanelControllerDelegate {
     }
 }
 
-
 //MARK: - UIPageViewControllerDataSource
 extension RootPageViewControllers: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewController = viewController as? AVPlayerViewViewController else {return nil}
+        guard let viewController = viewController as? DrinkViewController else {return nil}
         if let index = coffeeViewControllers.firstIndex(of: viewController) {
             if index > 0 {
                 return coffeeViewControllers[index - 1]
@@ -150,7 +156,7 @@ extension RootPageViewControllers: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewController = viewController as? AVPlayerViewViewController else {return nil}
+        guard let viewController = viewController as? DrinkViewController else {return nil}
         if let index = coffeeViewControllers.firstIndex(of: viewController) {
             if index < coffeeViewControllers.count - 1 {
                 return coffeeViewControllers[index + 1]
@@ -163,4 +169,17 @@ extension RootPageViewControllers: UIPageViewControllerDataSource {
 //MARK: - UIPageViewControllerDelegate
 extension RootPageViewControllers: UIPageViewControllerDelegate {
     
+}
+
+//MARK: - AuthorizationViewControllerDelegate
+extension RootPageViewControllers: AuthorizationViewControllerDelegate {
+    func authorizationViewControllerDidCancel(_controller controller: AuthorizationViewController) {
+        controller.dismiss(animated: true)
+    }
+}
+//MARK: - CustomSegmentControlTapedDelegate
+extension RootPageViewControllers: CustomSegmentControlTapedDelegate {
+    func collectionViewTaped(_ index: Int) {
+        setViewControllers([coffeeViewControllers[index]], direction: .forward, animated: true)
+    }
 }

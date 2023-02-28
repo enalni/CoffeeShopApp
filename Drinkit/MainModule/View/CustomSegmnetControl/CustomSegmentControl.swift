@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 final class CustomSegmentControl: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
@@ -26,8 +27,9 @@ final class CustomSegmentControl: UIView {
     }
     
     //MARK: - Private property
-    var collectionView: UICollectionView!
-    let items = ["💙мой дринкит", "зима","кофе","не кофе","еда","сладкое","забери с собой"]
+    private var collectionView: UICollectionView!
+    weak var delegate: CustomSegmentControlTapedDelegate?
+    private let items = ["💙мой дринкит", "зима","кофе"]
 }
 
 private extension CustomSegmentControl {
@@ -74,6 +76,7 @@ extension CustomSegmentControl: UICollectionViewDataSource{
 //MARK: - UICollectionViewDelegate
 extension CustomSegmentControl: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.collectionViewTaped(indexPath.row)
         print("TAPPED")
     }
 }

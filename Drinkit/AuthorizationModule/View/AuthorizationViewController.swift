@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 final class AuthorizationViewController: UIViewController {
     //MARK: Private property
     override func viewDidLoad() {
@@ -21,6 +23,8 @@ final class AuthorizationViewController: UIViewController {
     }
     
     //MARK: - Private property
+    
+    weak var delegate: AuthorizationViewControllerDelegate?
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -120,7 +124,8 @@ private extension AuthorizationViewController {
     }
     
     @objc func closeVC() {
-        dismiss(animated: true)
+        let vc = self
+        delegate?.authorizationViewControllerDidCancel(_controller: vc)
         print("DEBUG: TAPPED dismissViewControllerButton")
     }
     
