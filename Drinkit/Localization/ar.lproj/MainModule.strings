@@ -1,0 +1,11 @@
+/* 
+  MainModule.strings
+  Drinkit
+
+  Created by Александр Николаевич on 23.03.2023.
+  
+*/
+
+"name" = "Moscow";
+"login" = "login";
+"openingHours" = "to";

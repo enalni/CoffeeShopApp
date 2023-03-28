@@ -1,0 +1,93 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.703992, -37.625909]
+            },
+            "properties": {
+                "name": "Custom Location 1",
+                "description": "This is a custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.747604, 37.565172]
+            },
+            "properties": {
+                "name": "Custom Location 2",
+                "description": "This is another custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.773721, 37.585222]
+            },
+            "properties": {
+                "name": "Custom Location 3",
+                "description": "This is another custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.778757, 37.623224]
+            },
+            "properties": {
+                "name": "Custom Location 4",
+                "description": "This is another custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.708303, 37.652822]
+            },
+            "properties": {
+                "name": "Custom Location 5",
+                "description": "This is another custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.840245, 37.492024]
+            },
+            "properties": {
+                "name": "Custom Location 6",
+                "description": "This is another custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.743522, 37.505508]
+            },
+            "properties": {
+                "name": "Custom Location 7",
+                "description": "This is another custom location."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.703992, 37.625909]
+            },
+            "properties": {
+                "name": "Custom Location 8",
+                "description": "This is another custom location."
+            }
+        }
+    ]
+}
