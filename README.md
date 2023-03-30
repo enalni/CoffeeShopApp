@@ -2,6 +2,8 @@
 
 Приложение для заказа напитка в кофейне
 
+![image](https://github.com/enalni/CoffeeShopApp/blob/main/demo.gif)
+
 ## Stack
 
 Swift, Xcode 14.1, SPM
