@@ -1,10 +1,3 @@
-//
-//  RootPageViewControllers.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 28.01.2023.
-//
-
 import UIKit
 
 protocol ViewControllerCancelDelegate: AnyObject {
@@ -18,12 +11,12 @@ protocol CustomSegmentControlTappedDelegate: AnyObject {
 final class RootPageViewControllers: UIPageViewController {
     
     // MARK: Private property
-    private let customSegmentControl: CustomSegmentControl = .init()
+    private let customSegmentControl: CustomSegmentControlView = .init()
     private let shoppingCartView: ShoppingCartView = .init()
     var coffeeHelpers:[CoffeeViewModel] = .init()
     var drinksHelpers:[[Drink]] = .init()
     private var shoppingCartViewBottomConstraint = NSLayoutConstraint()
-        
+    
     // MARK: - Private constraint
     private enum UIConstants {
         static let heightShoppingCartView: CGFloat = 60
@@ -34,8 +27,7 @@ final class RootPageViewControllers: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createMockCoffeeViewModel()
-        createMockDrinks()
+        getMockData()
         initialize()
     }
     
@@ -96,39 +88,20 @@ private extension RootPageViewControllers {
         
     }
     
-    
-    func createMockCoffeeViewModel() {
-        let coffeeOne = CoffeeViewModel(coffeeName: "Дрип-пакет Эфиопия", coffeePrice: "120", videoFileName: "drip")
-        let coffeeTwo = CoffeeViewModel(coffeeName: "Фильтр кофе", coffeePrice: "150", videoFileName: "drip2")
-        let coffeeThree = CoffeeViewModel(coffeeName: "Заваренная с любовью дрипка", coffeePrice: "99", videoFileName: "coffee3")
-        coffeeHelpers.append(contentsOf: [coffeeOne,coffeeTwo,coffeeThree])
-    }
-    
-    func createMockDrinks() {
-        let setDrinksOne = [Drink(nameDrink: "Дрип-пакет Эфиопия", priceDrink: "70"),
-                            Drink(nameDrink: "Дрип-пакет Кения", priceDrink: "80"),
-                            Drink(nameDrink: "Дрип-пакет Коста-Рика", priceDrink: "80"),
-                            Drink(nameDrink: "Свеча в банке", priceDrink: "990")]
-        let setDrinksTwo = [Drink(nameDrink: "Капучино", priceDrink: "170"),
-                            Drink(nameDrink: "Латте лимонный пирог", priceDrink: "200"),
-                            Drink(nameDrink: "Флэт Уайт", priceDrink: "190"),
-                            Drink(nameDrink: "Раф Ванильный", priceDrink: "250")]
-        
-        let setDrinksThree = [Drink(nameDrink: "Заваренная дрипка", priceDrink: "170"),
-                              Drink(nameDrink: "Дрипка с собой", priceDrink: "80")]
-        
-        drinksHelpers.append(contentsOf: [setDrinksOne, setDrinksTwo, setDrinksThree])
+    func getMockData() {
+        coffeeHelpers.append(contentsOf: createMockCoffeeViewModel())
+        drinksHelpers.append(contentsOf: createMockDrinks())
     }
     
     func makeLeftBarButtonItem() -> [UIBarButtonItem] {
-        let logoBarButtonItem =  UIBarButtonItem(customView: DrinkitView())
+        let logoBarButtonItem =  UIBarButtonItem(customView: LocationView())
         let tapped = UITapGestureRecognizer(target: self, action: #selector(leftButtonTapped))
         logoBarButtonItem.customView?.addGestureRecognizer(tapped)
         return [logoBarButtonItem]
     }
     
     func makeRightBarButtonItem() -> UIBarButtonItem {
-        let loginView = UIBarButtonItem(customView: LoginViewButton())
+        let loginView = UIBarButtonItem(customView: LoginViewButtonView())
         let tapped = UITapGestureRecognizer(target: self, action: #selector(rightButtonTapped))
         loginView.customView?.addGestureRecognizer(tapped)
         return loginView
@@ -139,7 +112,7 @@ private extension RootPageViewControllers {
             let vc = AuthorizationViewController()
             vc.delegate = self
             present(vc, animated: true)
-            debugPrint("DEBUG: TAPPED rightBarButtonItem ")
+            print("TAPPED rightBarButtonItem")
         }
     }
     
@@ -148,7 +121,7 @@ private extension RootPageViewControllers {
             let vc = CoffeeShopLocationViewController()
             vc.delegate = self
             present(vc, animated: true)
-            debugPrint("DEBUG: TAPPED leftBarButtonItem")
+            print("TAPPED leftBarButtonItem")
         }
     }
 }
@@ -189,8 +162,9 @@ extension RootPageViewControllers: ViewControllerPresentDelegate {
     func viewControllerPresent(_controller: UIViewController) {
         if let shoppingCartViewcontroller = _controller as? ShoppingCartViewController {
             present(shoppingCartViewcontroller, animated: true)
-        } 
+        }
         else {
+            navigationItem.backBarButtonItem = UIBarButtonItem()
             navigationController?.pushViewController(_controller, animated: true)
         }
     }
@@ -203,6 +177,7 @@ extension RootPageViewControllers: CustomSegmentControlTappedDelegate {
     }
 }
 
+// MARK: - ShoppingCartViewDelegate
 extension RootPageViewControllers: ShoppingCartViewDelegate {
     func updatePriceShoppingCartView(_price: String) {
         shoppingCartViewBottomConstraint.constant = UIConstants.showConstraintShoppingCartView

@@ -1,15 +1,7 @@
-//
-//  TemPlateVC.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 22.02.2023.
-//
-
 import UIKit
 import FloatingPanel
 
 final class DrinkViewController: UIViewController {
-    
     // MARK: Public Func
     func configure(coffee:CoffeeViewModel, drink: [Drink]) {
         self.coffeeViewModel = coffee

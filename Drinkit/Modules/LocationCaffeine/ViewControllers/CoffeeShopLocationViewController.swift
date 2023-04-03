@@ -1,10 +1,3 @@
-//
-//  CoffeeShopLocationViewController.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 26.01.2023.
-//
-
 import UIKit
 import MapKit
 
@@ -96,9 +89,8 @@ private extension CoffeeShopLocationViewController {
     }
     
     @objc func closeVC() {
-        let vc = self
-        delegate?.viewControllerDidCancel(_controller: vc)
-        print("DEBUG: TAPPED dismissViewControllerButton")
+        delegate?.viewControllerDidCancel(_controller: self)
+        print("TAPPED dismissViewControllerButton")
     }
 }
 

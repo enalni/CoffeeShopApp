@@ -1,22 +1,14 @@
-//
-//  TagFlowLayout.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 19.01.2023.
-//
-
 import UIKit
 
 final class SegmentControlFlowLayout: UICollectionViewFlowLayout {
-    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let attributes = super.layoutAttributesForElements(in: rect) else {
             return nil
         }
-
+        
         var rows = [RowCollectionViewLayoutAttributes]()
         var currentRowY: CGFloat = -1
-
+        
         for attribute in attributes {
             if currentRowY != attribute.frame.origin.y {
                 currentRowY = attribute.frame.origin.y
@@ -24,9 +16,11 @@ final class SegmentControlFlowLayout: UICollectionViewFlowLayout {
             }
             rows.last?.add(attribute: attribute)
         }
-
+        
+        guard let collectionView = collectionView else { return nil }
+        let collectionViewWidth = collectionView.frame.width
         rows.forEach {
-            $0.tagLayout(collectionViewWidth: collectionView?.frame.width ?? 0)
+            $0.tagLayout(collectionViewWidth: collectionViewWidth)
         }
         return rows.flatMap { $0.attributes }
     }

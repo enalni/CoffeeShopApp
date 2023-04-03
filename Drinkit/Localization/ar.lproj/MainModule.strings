@@ -6,6 +6,7 @@
   
 */
 
-"name" = "Moscow";
-"login" = "login";
-"openingHours" = "to";
+"name" = "موسكو";
+"login" = "تسجيل الدخول";
+"openingHours" = "ل";
+"flavor" = "نكهة";

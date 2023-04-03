@@ -1,10 +1,3 @@
-//
-//  CustomAnnotationView.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 09.03.2023.
-//
-
 import UIKit
 import MapKit
 
@@ -17,7 +10,7 @@ final class CustomAnnotationView: MKAnnotationView {
     }
     
     // MARK: Private property
-    let logoImageView: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 20, y: 0, width: 50, height: 50))
         imageView.contentMode = .center
         imageView.layer.cornerRadius = UIConstants.cornerRadiusSet
@@ -25,7 +18,7 @@ final class CustomAnnotationView: MKAnnotationView {
         return imageView
     }()
     
-    let locationCoffeeShoplabel: UILabel = {
+    private let locationCoffeeShoplabel: UILabel = {
         let label = UILabel(frame: CGRect(x: -25, y: 55, width: 140, height: 30))
         label.textColor = UIColor.black
         label.textAlignment = .center

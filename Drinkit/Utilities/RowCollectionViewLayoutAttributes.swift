@@ -1,10 +1,3 @@
-//
-//  Row.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 19.01.2023.
-//
-
 import UIKit
 
 final class RowCollectionViewLayoutAttributes {

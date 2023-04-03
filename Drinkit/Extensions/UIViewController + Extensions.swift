@@ -1,10 +1,3 @@
-//
-//  UIViewController + Extensions.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 09.02.2023.
-//
-
 import UIKit
 
 extension UIViewController {

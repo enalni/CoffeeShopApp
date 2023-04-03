@@ -5,10 +5,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.703992, -37.625909]
+                "coordinates": [37.652822, 55.708303]
             },
             "properties": {
-                "name": "Custom Location 1",
+                "name": "Omega Plaza",
                 "description": "This is a custom location."
             }
         },
@@ -16,10 +16,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.747604, 37.565172]
+                "coordinates": [37.625909, 55.703992]
             },
             "properties": {
-                "name": "Custom Location 2",
+                "name": "W-Plaza",
                 "description": "This is another custom location."
             }
         },
@@ -27,10 +27,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.773721, 37.585222]
+                "coordinates": [37.565172, 55.747604]
             },
             "properties": {
-                "name": "Custom Location 3",
+                "name": "м. Киевская",
                 "description": "This is another custom location."
             }
         },
@@ -38,10 +38,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.778757, 37.623224]
+                "coordinates": [37.536574, 55.749246]
             },
             "properties": {
-                "name": "Custom Location 4",
+                "name": "Сити-Федерация",
                 "description": "This is another custom location."
             }
         },
@@ -49,10 +49,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.708303, 37.652822]
+                "coordinates": [37.505508, 55.743522]
             },
             "properties": {
-                "name": "Custom Location 5",
+                "name": "Конвент +",
                 "description": "This is another custom location."
             }
         },
@@ -60,10 +60,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.840245, 37.492024]
+                "coordinates": [37.585222, 55.773721]
             },
             "properties": {
-                "name": "Custom Location 6",
+                "name": "м. Белорусская",
                 "description": "This is another custom location."
             }
         },
@@ -71,10 +71,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.743522, 37.505508]
+                "coordinates": [37.623224, 55.778757]
             },
             "properties": {
-                "name": "Custom Location 7",
+                "name": "Diamond hall",
                 "description": "This is another custom location."
             }
         },
@@ -82,10 +82,10 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [55.703992, 37.625909]
+                "coordinates": [37.589921, 55.804984]
             },
             "properties": {
-                "name": "Custom Location 8",
+                "name": "Савёловский",
                 "description": "This is another custom location."
             }
         }

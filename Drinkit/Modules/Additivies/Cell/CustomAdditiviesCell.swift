@@ -1,12 +1,4 @@
-//
-//  CustomAdditiviesCell.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 20.03.2023.
-//
-
 import UIKit
-
 
 final class CustomAdditiviesCell: UICollectionViewCell {
     
@@ -26,7 +18,6 @@ final class CustomAdditiviesCell: UICollectionViewCell {
     }
     
     // MARK: Private property
-    
     private let additiviesImageView: UIImageView = {
         let imageView = UIImageView()
         let image = UIImage(named: "additiviesImage")

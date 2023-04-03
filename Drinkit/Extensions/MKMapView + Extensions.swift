@@ -1,8 +1,9 @@
-//
-//  MKMapView + Extensions.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 08.03.2023.
-//
+import MapKit
 
-import Foundation
+extension MKMapView {
+    
+    func centerLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+    }
+}

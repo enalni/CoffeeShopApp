@@ -1,8 +1,8 @@
-//
-//  UIButton + Extensions.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 13.03.2023.
-//
+import UIKit
 
-import Foundation
+extension UIButton {
+    func addVibrationResponse() {
+        let impact = UIImpactFeedbackGenerator()
+        impact.impactOccurred()
+    }
+}

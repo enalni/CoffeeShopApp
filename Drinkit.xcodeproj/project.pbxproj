@@ -7,68 +7,122 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11202D1A29B8A1C500163414 /* MKMapView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11202D1929B8A1C500163414 /* MKMapView + Extensions.swift */; };
 		11277F76297ECE7900875127 /* drip2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 11277F75297ECE7900875127 /* drip2.MP4 */; };
+		112A0EEA29BA043000091A75 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A0EE929BA043000091A75 /* CustomAnnotationView.swift */; };
+		112A0EED29BA053800091A75 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A0EEC29BA053800091A75 /* CoffeeShop.swift */; };
+		112A0EEF29BA098900091A75 /* CoffeeShopLocation.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 112A0EEE29BA098900091A75 /* CoffeeShopLocation.geojson */; };
+		112E6F9A29CC999600C48E46 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112E6F9929CC999600C48E46 /* String + Extensions.swift */; };
+		1132D31529BF1D2200B0E66F /* ConfigureDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1132D31429BF1D2200B0E66F /* ConfigureDrinkViewController.swift */; };
+		1132D31729BF1F1300B0E66F /* ConfigureDrinkCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1132D31629BF1F1300B0E66F /* ConfigureDrinkCollectionCell.swift */; };
+		1132D31F29BF541000B0E66F /* CustomDrinkSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1132D31E29BF541000B0E66F /* CustomDrinkSegmentControl.swift */; };
 		113416D32987B6F90048343B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 113416D22987B6F90048343B /* Roboto-Medium.ttf */; };
+		1136785129B2362000C6BF68 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1136785029B2362000C6BF68 /* ShoppingCartViewController.swift */; };
+		113A8AF329DAF9D50000F91C /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 113A8AF229DAF9D50000F91C /* FloatingPanel */; };
+		11434EA329BF779300A0939B /* UIButton + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11434EA229BF779300A0939B /* UIButton + Extensions.swift */; };
 		1146AD9B29868FE000F63E78 /* FloatingPanelStocksLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146AD9A29868FE000F63E78 /* FloatingPanelStocksLayout.swift */; };
+		11588E2F29C34D7600E944E0 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11588E2E29C34D7600E944E0 /* UIColor + Extensions.swift */; };
 		1162E10B29797A0B00F97DE4 /* SegmentControlFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10A29797A0B00F97DE4 /* SegmentControlFlowLayout.swift */; };
 		1162E10D29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10C29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift */; };
 		1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */; };
+		1164378E29B6284B00EF1CFA /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164378D29B6284B00EF1CFA /* ShoppingCartTableViewCell.swift */; };
 		1165461F29923946007C2D1A /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165461E29923946007C2D1A /* ShoppingCartView.swift */; };
 		116E5FA229852A0B0092F2C6 /* RootPageViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */; };
 		116E5FA529852A960092F2C6 /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5FA429852A960092F2C6 /* CoffeeViewModel.swift */; };
 		1173192829829139009518F4 /* CoffeeShopLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */; };
 		117E70BE297ABA5D00C17F9F /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */; };
 		117E70C3297ADA7300C17F9F /* InformationOfDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */; };
-		117E70D1297AF7C800C17F9F /* CoffeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */; };
+		117E70D1297AF7C800C17F9F /* DrinkCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E70D0297AF7C800C17F9F /* DrinkCollectionCell.swift */; };
+		118358E929D3156600392D55 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118358E829D3156600392D55 /* MockData.swift */; };
 		1188AF51298545C100947C87 /* coffee3.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 1188AF50298545C100947C87 /* coffee3.MP4 */; };
 		119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A02977EEE9007D6A44 /* AppDelegate.swift */; };
 		119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82A22977EEE9007D6A44 /* SceneDelegate.swift */; };
 		119E82AA2977EEE9007D6A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119E82A92977EEE9007D6A44 /* Assets.xcassets */; };
 		119E82AD2977EEE9007D6A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119E82AB2977EEE9007D6A44 /* LaunchScreen.storyboard */; };
 		119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BB2978093A007D6A44 /* UIView + Extensions.swift */; };
-		119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BE29780A3D007D6A44 /* DrinkitView.swift */; };
-		119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C0297812C5007D6A44 /* LoginViewButton.swift */; };
-		119E82C329781C01007D6A44 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C229781C01007D6A44 /* CustomSegmentControl.swift */; };
-		11C2340429841110006F99B5 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 11C2340329841110006F99B5 /* FloatingPanel */; };
-		11D494772983D6DB0072C6D0 /* CoffeeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */; };
-		11D494792983D9A10072C6D0 /* CoffeeCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D494782983D9A10072C6D0 /* CoffeeCompositionalLayout.swift */; };
+		119E82BF29780A3D007D6A44 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82BE29780A3D007D6A44 /* LocationView.swift */; };
+		119E82C1297812C5007D6A44 /* LoginViewButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C0297812C5007D6A44 /* LoginViewButtonView.swift */; };
+		119E82C329781C01007D6A44 /* CustomSegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E82C229781C01007D6A44 /* CustomSegmentControlView.swift */; };
+		11D1E96029C899780048D257 /* ConfigDrinkAdditivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E95F29C899780048D257 /* ConfigDrinkAdditivesViewController.swift */; };
+		11D1E96529C89AA40048D257 /* Additivies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E96429C89AA40048D257 /* Additivies.swift */; };
+		11D1E96729C89B370048D257 /* CustomAdditiviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E96629C89B370048D257 /* CustomAdditiviesCell.swift */; };
+		11D1E96A29C8A0710048D257 /* PanelTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E96929C8A0710048D257 /* PanelTransition.swift */; };
+		11D1E96C29C8A0880048D257 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E96B29C8A0880048D257 /* TransitionDriver.swift */; };
+		11D1E96E29C8A09E0048D257 /* TransitionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E96D29C8A09E0048D257 /* TransitionDirection.swift */; };
+		11D1E97129C8A0BF0048D257 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E97029C8A0BF0048D257 /* PresentationController.swift */; };
+		11D1E97329C8A0D50048D257 /* DimmPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E97229C8A0D50048D257 /* DimmPresentationController.swift */; };
+		11D1E97629C8A0F50048D257 /* PresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E97529C8A0F50048D257 /* PresentAnimation.swift */; };
+		11D1E97829C8A1100048D257 /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E97729C8A1100048D257 /* DismissAnimation.swift */; };
+		11D1E97A29C8A16E0048D257 /* CGPoint+Velocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E97929C8A16E0048D257 /* CGPoint+Velocity.swift */; };
+		11D1E97C29C8A18B0048D257 /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D1E97B29C8A18B0048D257 /* InstantPanGestureRecognizer.swift */; };
+		11D494772983D6DB0072C6D0 /* DrinkCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D494762983D6DB0072C6D0 /* DrinkCollectionViewController.swift */; };
 		11D62762297D7A5C00A7C818 /* drip.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 11D62761297D7A5C00A7C818 /* drip.MP4 */; };
 		11F3667329A63EC80023AE78 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */; };
 		11F3667529A64E560023AE78 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3667429A64E560023AE78 /* DrinkViewController.swift */; };
+		11F6026E29CCA0CF0017F90B /* MainModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11F6027029CCA0CF0017F90B /* MainModule.strings */; };
 		11FBA7F62995249600997608 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBA7F52995249600997608 /* UIViewController + Extensions.swift */; };
+		11FEFAE029AF7B96001EDBE7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FEFADF29AF7B96001EDBE7 /* Drink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11202D1929B8A1C500163414 /* MKMapView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView + Extensions.swift"; sourceTree = "<group>"; };
 		11277F75297ECE7900875127 /* drip2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip2.MP4; sourceTree = "<group>"; };
+		112A0EE929BA043000091A75 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		112A0EEC29BA053800091A75 /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
+		112A0EEE29BA098900091A75 /* CoffeeShopLocation.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoffeeShopLocation.geojson; sourceTree = "<group>"; };
+		112E6F9929CC999600C48E46 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		112E6FA129CCA02000C48E46 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1132D31429BF1D2200B0E66F /* ConfigureDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureDrinkViewController.swift; sourceTree = "<group>"; };
+		1132D31629BF1F1300B0E66F /* ConfigureDrinkCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureDrinkCollectionCell.swift; sourceTree = "<group>"; };
+		1132D31E29BF541000B0E66F /* CustomDrinkSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDrinkSegmentControl.swift; sourceTree = "<group>"; };
 		113416D22987B6F90048343B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		1136785029B2362000C6BF68 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		11434EA229BF779300A0939B /* UIButton + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extensions.swift"; sourceTree = "<group>"; };
 		1146AD9A29868FE000F63E78 /* FloatingPanelStocksLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelStocksLayout.swift; sourceTree = "<group>"; };
+		11588E2E29C34D7600E944E0 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		1162E10A29797A0B00F97DE4 /* SegmentControlFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlFlowLayout.swift; sourceTree = "<group>"; };
 		1162E10C29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlCollectionCell.swift; sourceTree = "<group>"; };
+		1164378D29B6284B00EF1CFA /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		1165461E29923946007C2D1A /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
 		116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewControllers.swift; sourceTree = "<group>"; };
 		116E5FA429852A960092F2C6 /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 		1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopLocationViewController.swift; sourceTree = "<group>"; };
 		117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationOfDrinkView.swift; sourceTree = "<group>"; };
-		117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionCell.swift; sourceTree = "<group>"; };
+		117E70D0297AF7C800C17F9F /* DrinkCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionCell.swift; sourceTree = "<group>"; };
+		118358E829D3156600392D55 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1188AF50298545C100947C87 /* coffee3.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = coffee3.MP4; sourceTree = "<group>"; };
 		119E829D2977EEE9007D6A44 /* Drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119E82A02977EEE9007D6A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119E82A22977EEE9007D6A44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		119E82A92977EEE9007D6A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		119E82AC2977EEE9007D6A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		119E82AE2977EEE9007D6A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119E82BB2978093A007D6A44 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
-		119E82BE29780A3D007D6A44 /* DrinkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkitView.swift; sourceTree = "<group>"; };
-		119E82C0297812C5007D6A44 /* LoginViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewButton.swift; sourceTree = "<group>"; };
-		119E82C229781C01007D6A44 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
-		11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCollectionViewController.swift; sourceTree = "<group>"; };
-		11D494782983D9A10072C6D0 /* CoffeeCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCompositionalLayout.swift; sourceTree = "<group>"; };
+		119E82BE29780A3D007D6A44 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		119E82C0297812C5007D6A44 /* LoginViewButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewButtonView.swift; sourceTree = "<group>"; };
+		119E82C229781C01007D6A44 /* CustomSegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControlView.swift; sourceTree = "<group>"; };
+		11D1E95F29C899780048D257 /* ConfigDrinkAdditivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigDrinkAdditivesViewController.swift; sourceTree = "<group>"; };
+		11D1E96429C89AA40048D257 /* Additivies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Additivies.swift; sourceTree = "<group>"; };
+		11D1E96629C89B370048D257 /* CustomAdditiviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAdditiviesCell.swift; sourceTree = "<group>"; };
+		11D1E96929C8A0710048D257 /* PanelTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelTransition.swift; sourceTree = "<group>"; };
+		11D1E96B29C8A0880048D257 /* TransitionDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
+		11D1E96D29C8A09E0048D257 /* TransitionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDirection.swift; sourceTree = "<group>"; };
+		11D1E97029C8A0BF0048D257 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		11D1E97229C8A0D50048D257 /* DimmPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmPresentationController.swift; sourceTree = "<group>"; };
+		11D1E97529C8A0F50048D257 /* PresentAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimation.swift; sourceTree = "<group>"; };
+		11D1E97729C8A1100048D257 /* DismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimation.swift; sourceTree = "<group>"; };
+		11D1E97929C8A16E0048D257 /* CGPoint+Velocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Velocity.swift"; sourceTree = "<group>"; };
+		11D1E97B29C8A18B0048D257 /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		11D494762983D6DB0072C6D0 /* DrinkCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionViewController.swift; sourceTree = "<group>"; };
 		11D62761297D7A5C00A7C818 /* drip.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drip.MP4; sourceTree = "<group>"; };
 		11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		11F3667429A64E560023AE78 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		11F6026F29CCA0CF0017F90B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainModule.strings; sourceTree = "<group>"; };
+		11F6027129CCA0D20017F90B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainModule.strings; sourceTree = "<group>"; };
+		11F6027229CCA3730017F90B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MainModule.strings; sourceTree = "<group>"; };
 		11FBA7F52995249600997608 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		11FEFADF29AF7B96001EDBE7 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +130,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C2340429841110006F99B5 /* FloatingPanel in Frameworks */,
+				113A8AF329DAF9D50000F91C /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112A0EE829BA041B00091A75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				112A0EE929BA043000091A75 /* CustomAnnotationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		112A0EEB29BA052600091A75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				112A0EEC29BA053800091A75 /* CoffeeShop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		112E6F9829CC88F700C48E46 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				11F6027029CCA0CF0017F90B /* MainModule.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		1132D31329BF1CC300B0E66F /* ConfigureDrink */ = {
+			isa = PBXGroup;
+			children = (
+				11B6D5D429CA08670082D7DE /* ViewControllers */,
+				11B6D5D529CA086F0082D7DE /* Cell */,
+				11B6D5D629CA087E0082D7DE /* CustomSegmentedControl */,
+			);
+			path = ConfigureDrink;
+			sourceTree = "<group>";
+		};
 		113416BD2987B3540048343B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,18 +179,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		1165461D29923938007C2D1A /* ShoppingCartView */ = {
+		1136784F29B235ED00C6BF68 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
-				1165461E29923946007C2D1A /* ShoppingCartView.swift */,
+				11B6D5CE29CA05BC0082D7DE /* View */,
+				11B6D5CD29CA05AE0082D7DE /* ViewControllers */,
+				11B6D5D029CA07A70082D7DE /* Cell */,
 			);
-			path = ShoppingCartView;
+			path = ShoppingCart;
 			sourceTree = "<group>";
 		};
 		116E5FA329852A480092F2C6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				116E5FA429852A960092F2C6 /* CoffeeViewModel.swift */,
+				118358E829D3156600392D55 /* MockData.swift */,
+				1162E10A29797A0B00F97DE4 /* SegmentControlFlowLayout.swift */,
+				1162E10C29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift */,
 				1146AD9A29868FE000F63E78 /* FloatingPanelStocksLayout.swift */,
 			);
 			path = Utilities;
@@ -112,35 +204,16 @@
 			isa = PBXGroup;
 			children = (
 				1162E10E29797A3D00F97DE4 /* SegmentControlCollectionCell.swift */,
-				1162E10A29797A0B00F97DE4 /* SegmentControlFlowLayout.swift */,
-				1162E10C29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift */,
-				117E70D0297AF7C800C17F9F /* CoffeeCollectionCell.swift */,
-				11D494782983D9A10072C6D0 /* CoffeeCompositionalLayout.swift */,
+				117E70D0297AF7C800C17F9F /* DrinkCollectionCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		117E70BB297ABA0500C17F9F /* UIBarButtonItem */ = {
-			isa = PBXGroup;
-			children = (
-				119E82BE29780A3D007D6A44 /* DrinkitView.swift */,
-				119E82C0297812C5007D6A44 /* LoginViewButton.swift */,
-			);
-			path = UIBarButtonItem;
-			sourceTree = "<group>";
-		};
-		117E70BC297ABA2F00C17F9F /* CustomSegmnetControl */ = {
-			isa = PBXGroup;
-			children = (
-				119E82C229781C01007D6A44 /* CustomSegmentControl.swift */,
-			);
-			path = CustomSegmnetControl;
 			sourceTree = "<group>";
 		};
 		119E82942977EEE9007D6A44 = {
 			isa = PBXGroup;
 			children = (
 				119E829F2977EEE9007D6A44 /* Drinkit */,
+				112A0EEE29BA098900091A75 /* CoffeeShopLocation.geojson */,
 				11D62761297D7A5C00A7C818 /* drip.MP4 */,
 				11277F75297ECE7900875127 /* drip2.MP4 */,
 				1188AF50298545C100947C87 /* coffee3.MP4 */,
@@ -160,13 +233,13 @@
 			isa = PBXGroup;
 			children = (
 				119E82B7297807C3007D6A44 /* Application */,
-				11E971F129AE2C4300A17976 /* MainModule */,
-				11E971F029AE2C2B00A17976 /* LocationСoffeinModule */,
-				11E971EF29AE2BD900A17976 /* AuthorizationModule */,
+				11B6D5CC29C9E06E0082D7DE /* Modules */,
 				119E82B9297807F1007D6A44 /* Resources */,
 				116E5FA329852A480092F2C6 /* Utilities */,
 				119E82BA2978091E007D6A44 /* Extensions */,
+				11D1E96829C8A0460048D257 /* Transition */,
 				113416BD2987B3540048343B /* Fonts */,
+				112E6F9829CC88F700C48E46 /* Localization */,
 			);
 			path = Drinkit;
 			sourceTree = "<group>";
@@ -194,7 +267,11 @@
 			isa = PBXGroup;
 			children = (
 				119E82BB2978093A007D6A44 /* UIView + Extensions.swift */,
+				11588E2E29C34D7600E944E0 /* UIColor + Extensions.swift */,
+				11434EA229BF779300A0939B /* UIButton + Extensions.swift */,
+				112E6F9929CC999600C48E46 /* String + Extensions.swift */,
 				11FBA7F52995249600997608 /* UIViewController + Extensions.swift */,
+				11202D1929B8A1C500163414 /* MKMapView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,57 +279,204 @@
 		119E82BD29780A2A007D6A44 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1165461D29923938007C2D1A /* ShoppingCartView */,
-				117E70BA297AB9F800C17F9F /* Cell */,
-				117E70BB297ABA0500C17F9F /* UIBarButtonItem */,
-				117E70BC297ABA2F00C17F9F /* CustomSegmnetControl */,
+				117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */,
+				119E82BE29780A3D007D6A44 /* LocationView.swift */,
+				119E82C0297812C5007D6A44 /* LoginViewButtonView.swift */,
+				119E82C229781C01007D6A44 /* CustomSegmentControlView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		11E971EF29AE2BD900A17976 /* AuthorizationModule */ = {
+		11B6D5CC29C9E06E0082D7DE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				11E971F229AE2C9600A17976 /* View */,
+				11E971F129AE2C4300A17976 /* Main */,
+				11E971F029AE2C2B00A17976 /* LocationCaffeine */,
+				11E971EF29AE2BD900A17976 /* Authorization */,
+				1132D31329BF1CC300B0E66F /* ConfigureDrink */,
+				11D1E96129C89A7A0048D257 /* Additivies */,
+				1136784F29B235ED00C6BF68 /* ShoppingCart */,
 			);
-			path = AuthorizationModule;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		11E971F029AE2C2B00A17976 /* LocationСoffeinModule */ = {
+		11B6D5CD29CA05AE0082D7DE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				11E971F329AE2CDD00A17976 /* View */,
+				1136785029B2362000C6BF68 /* ShoppingCartViewController.swift */,
 			);
-			path = "LocationСoffeinModule";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		11E971F129AE2C4300A17976 /* MainModule */ = {
+		11B6D5CE29CA05BC0082D7DE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */,
-				11F3667429A64E560023AE78 /* DrinkViewController.swift */,
-				11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */,
-				11D494762983D6DB0072C6D0 /* CoffeeCollectionViewController.swift */,
-				117E70C2297ADA7300C17F9F /* InformationOfDrinkView.swift */,
+				1165461E29923946007C2D1A /* ShoppingCartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11B6D5D029CA07A70082D7DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1164378D29B6284B00EF1CFA /* ShoppingCartTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		11B6D5D129CA07CF0082D7DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E95F29C899780048D257 /* ConfigDrinkAdditivesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		11B6D5D229CA07DB0082D7DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E96429C89AA40048D257 /* Additivies.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11B6D5D329CA07E00082D7DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E96629C89B370048D257 /* CustomAdditiviesCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		11B6D5D429CA08670082D7DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1132D31429BF1D2200B0E66F /* ConfigureDrinkViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		11B6D5D529CA086F0082D7DE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1132D31629BF1F1300B0E66F /* ConfigureDrinkCollectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		11B6D5D629CA087E0082D7DE /* CustomSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				1132D31E29BF541000B0E66F /* CustomDrinkSegmentControl.swift */,
+			);
+			path = CustomSegmentedControl;
+			sourceTree = "<group>";
+		};
+		11D1E96129C89A7A0048D257 /* Additivies */ = {
+			isa = PBXGroup;
+			children = (
+				11B6D5D229CA07DB0082D7DE /* Model */,
+				11B6D5D129CA07CF0082D7DE /* ViewControllers */,
+				11B6D5D329CA07E00082D7DE /* Cell */,
+			);
+			path = Additivies;
+			sourceTree = "<group>";
+		};
+		11D1E96829C8A0460048D257 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E96929C8A0710048D257 /* PanelTransition.swift */,
+				11D1E96B29C8A0880048D257 /* TransitionDriver.swift */,
+				11D1E96D29C8A09E0048D257 /* TransitionDirection.swift */,
+				11D1E97429C8A0E60048D257 /* Animations */,
+				11D1E96F29C8A0B20048D257 /* Presentation controller */,
+				11D1E97929C8A16E0048D257 /* CGPoint+Velocity.swift */,
+				11D1E97B29C8A18B0048D257 /* InstantPanGestureRecognizer.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		11D1E96F29C8A0B20048D257 /* Presentation controller */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E97029C8A0BF0048D257 /* PresentationController.swift */,
+				11D1E97229C8A0D50048D257 /* DimmPresentationController.swift */,
+			);
+			path = "Presentation controller";
+			sourceTree = "<group>";
+		};
+		11D1E97429C8A0E60048D257 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				11D1E97529C8A0F50048D257 /* PresentAnimation.swift */,
+				11D1E97729C8A1100048D257 /* DismissAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		11E971EF29AE2BD900A17976 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				11E971F229AE2C9600A17976 /* ViewControllers */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		11E971F029AE2C2B00A17976 /* LocationCaffeine */ = {
+			isa = PBXGroup;
+			children = (
+				112A0EEB29BA052600091A75 /* Model */,
+				11E971F329AE2CDD00A17976 /* ViewControllers */,
+				112A0EE829BA041B00091A75 /* View */,
+			);
+			path = LocationCaffeine;
+			sourceTree = "<group>";
+		};
+		11E971F129AE2C4300A17976 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				11FEFADD29AF7B5E001EDBE7 /* Model */,
+				11FEFADE29AF7B84001EDBE7 /* ViewControllers */,
 				119E82BD29780A2A007D6A44 /* View */,
+				117E70BA297AB9F800C17F9F /* Cell */,
 			);
-			path = MainModule;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		11E971F229AE2C9600A17976 /* View */ = {
+		11E971F229AE2C9600A17976 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				117E70BD297ABA5D00C17F9F /* AuthorizationViewController.swift */,
 			);
-			path = View;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		11E971F329AE2CDD00A17976 /* View */ = {
+		11E971F329AE2CDD00A17976 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				1173192729829139009518F4 /* CoffeeShopLocationViewController.swift */,
 			);
-			path = View;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		11FEFADD29AF7B5E001EDBE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11FEFADF29AF7B96001EDBE7 /* Drink.swift */,
+				116E5FA429852A960092F2C6 /* CoffeeViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11FEFADE29AF7B84001EDBE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				116E5FA129852A0B0092F2C6 /* RootPageViewControllers.swift */,
+				11F3667229A63EC80023AE78 /* VideoPlayerViewController.swift */,
+				11F3667429A64E560023AE78 /* DrinkViewController.swift */,
+				11D494762983D6DB0072C6D0 /* DrinkCollectionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +496,7 @@
 			);
 			name = Drinkit;
 			packageProductDependencies = (
-				11C2340329841110006F99B5 /* FloatingPanel */,
+				113A8AF229DAF9D50000F91C /* FloatingPanel */,
 			);
 			productName = Drinkit;
 			productReference = 119E829D2977EEE9007D6A44 /* Drinkit.app */;
@@ -299,11 +523,12 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
+				ar,
 			);
 			mainGroup = 119E82942977EEE9007D6A44;
 			packageReferences = (
-				11C2340229841110006F99B5 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+				113A8AF129DAF9D50000F91C /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 			);
 			productRefGroup = 119E829E2977EEE9007D6A44 /* Products */;
 			projectDirPath = "";
@@ -320,9 +545,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1188AF51298545C100947C87 /* coffee3.MP4 in Resources */,
+				112A0EEF29BA098900091A75 /* CoffeeShopLocation.geojson in Resources */,
 				11277F76297ECE7900875127 /* drip2.MP4 in Resources */,
 				11D62762297D7A5C00A7C818 /* drip.MP4 in Resources */,
 				113416D32987B6F90048343B /* Roboto-Medium.ttf in Resources */,
+				11F6026E29CCA0CF0017F90B /* MainModule.strings in Resources */,
 				119E82AD2977EEE9007D6A44 /* LaunchScreen.storyboard in Resources */,
 				119E82AA2977EEE9007D6A44 /* Assets.xcassets in Resources */,
 			);
@@ -336,27 +563,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				1146AD9B29868FE000F63E78 /* FloatingPanelStocksLayout.swift in Sources */,
+				1164378E29B6284B00EF1CFA /* ShoppingCartTableViewCell.swift in Sources */,
 				1173192829829139009518F4 /* CoffeeShopLocationViewController.swift in Sources */,
+				11588E2F29C34D7600E944E0 /* UIColor + Extensions.swift in Sources */,
 				117E70C3297ADA7300C17F9F /* InformationOfDrinkView.swift in Sources */,
-				11D494792983D9A10072C6D0 /* CoffeeCompositionalLayout.swift in Sources */,
-				11D494772983D6DB0072C6D0 /* CoffeeCollectionViewController.swift in Sources */,
+				11D494772983D6DB0072C6D0 /* DrinkCollectionViewController.swift in Sources */,
 				1162E10B29797A0B00F97DE4 /* SegmentControlFlowLayout.swift in Sources */,
+				112A0EEA29BA043000091A75 /* CustomAnnotationView.swift in Sources */,
 				1162E10D29797A1C00F97DE4 /* RowCollectionViewLayoutAttributes.swift in Sources */,
 				11F3667529A64E560023AE78 /* DrinkViewController.swift in Sources */,
+				1136785129B2362000C6BF68 /* ShoppingCartViewController.swift in Sources */,
+				11434EA329BF779300A0939B /* UIButton + Extensions.swift in Sources */,
+				11D1E97329C8A0D50048D257 /* DimmPresentationController.swift in Sources */,
 				119E82BC2978093A007D6A44 /* UIView + Extensions.swift in Sources */,
+				11D1E96529C89AA40048D257 /* Additivies.swift in Sources */,
 				116E5FA529852A960092F2C6 /* CoffeeViewModel.swift in Sources */,
+				1132D31F29BF541000B0E66F /* CustomDrinkSegmentControl.swift in Sources */,
+				1132D31529BF1D2200B0E66F /* ConfigureDrinkViewController.swift in Sources */,
+				11D1E96729C89B370048D257 /* CustomAdditiviesCell.swift in Sources */,
+				112E6F9A29CC999600C48E46 /* String + Extensions.swift in Sources */,
 				117E70BE297ABA5D00C17F9F /* AuthorizationViewController.swift in Sources */,
 				11FBA7F62995249600997608 /* UIViewController + Extensions.swift in Sources */,
-				119E82BF29780A3D007D6A44 /* DrinkitView.swift in Sources */,
-				119E82C329781C01007D6A44 /* CustomSegmentControl.swift in Sources */,
+				119E82BF29780A3D007D6A44 /* LocationView.swift in Sources */,
+				119E82C329781C01007D6A44 /* CustomSegmentControlView.swift in Sources */,
+				11D1E97A29C8A16E0048D257 /* CGPoint+Velocity.swift in Sources */,
+				118358E929D3156600392D55 /* MockData.swift in Sources */,
+				112A0EED29BA053800091A75 /* CoffeeShop.swift in Sources */,
+				11D1E96029C899780048D257 /* ConfigDrinkAdditivesViewController.swift in Sources */,
+				11D1E96E29C8A09E0048D257 /* TransitionDirection.swift in Sources */,
 				1162E10F29797A3D00F97DE4 /* SegmentControlCollectionCell.swift in Sources */,
+				11D1E97629C8A0F50048D257 /* PresentAnimation.swift in Sources */,
+				11D1E96C29C8A0880048D257 /* TransitionDriver.swift in Sources */,
 				1165461F29923946007C2D1A /* ShoppingCartView.swift in Sources */,
 				116E5FA229852A0B0092F2C6 /* RootPageViewControllers.swift in Sources */,
-				117E70D1297AF7C800C17F9F /* CoffeeCollectionCell.swift in Sources */,
+				11202D1A29B8A1C500163414 /* MKMapView + Extensions.swift in Sources */,
+				11D1E97C29C8A18B0048D257 /* InstantPanGestureRecognizer.swift in Sources */,
+				117E70D1297AF7C800C17F9F /* DrinkCollectionCell.swift in Sources */,
+				11FEFAE029AF7B96001EDBE7 /* Drink.swift in Sources */,
+				1132D31729BF1F1300B0E66F /* ConfigureDrinkCollectionCell.swift in Sources */,
+				11D1E97829C8A1100048D257 /* DismissAnimation.swift in Sources */,
 				119E82A12977EEE9007D6A44 /* AppDelegate.swift in Sources */,
-				119E82C1297812C5007D6A44 /* LoginViewButton.swift in Sources */,
+				119E82C1297812C5007D6A44 /* LoginViewButtonView.swift in Sources */,
+				11D1E97129C8A0BF0048D257 /* PresentationController.swift in Sources */,
 				119E82A32977EEE9007D6A44 /* SceneDelegate.swift in Sources */,
 				11F3667329A63EC80023AE78 /* VideoPlayerViewController.swift in Sources */,
+				11D1E96A29C8A0710048D257 /* PanelTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,9 +617,19 @@
 		119E82AB2977EEE9007D6A44 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				119E82AC2977EEE9007D6A44 /* Base */,
+				112E6FA129CCA02000C48E46 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		11F6027029CCA0CF0017F90B /* MainModule.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11F6026F29CCA0CF0017F90B /* en */,
+				11F6027129CCA0D20017F90B /* ru */,
+				11F6027229CCA3730017F90B /* ar */,
+			);
+			name = MainModule.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -378,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -438,6 +700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -500,7 +763,8 @@
 				INFOPLIST_FILE = Drinkit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,9 +773,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = alexandercorporation.Drinkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,7 +794,8 @@
 				INFOPLIST_FILE = Drinkit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,9 +804,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = alexandercorporation.Drinkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -566,7 +837,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		11C2340229841110006F99B5 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+		113A8AF129DAF9D50000F91C /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scenee/FloatingPanel";
 			requirement = {
@@ -577,9 +848,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		11C2340329841110006F99B5 /* FloatingPanel */ = {
+		113A8AF229DAF9D50000F91C /* FloatingPanel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11C2340229841110006F99B5 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			package = 113A8AF129DAF9D50000F91C /* XCRemoteSwiftPackageReference "FloatingPanel" */;
 			productName = FloatingPanel;
 		};
 /* End XCSwiftPackageProductDependency section */

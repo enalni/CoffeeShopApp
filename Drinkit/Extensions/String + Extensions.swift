@@ -1,8 +1,7 @@
-//
-//  String + Extensions.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 23.03.2023.
-//
+import UIKit
 
-import Foundation
+extension String {
+    func localized(tableName: String = "Localizable") -> String {
+        return NSLocalizedString(self, tableName: tableName, value: "******\(self)******", comment: "")
+    }
+}

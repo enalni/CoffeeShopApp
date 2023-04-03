@@ -1,10 +1,3 @@
-//
-//  ConfigureDrinkCollectionCell.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 13.03.2023.
-//
-
 import UIKit
 
 final class ConfigureDrinkCollectionCell: UICollectionViewCell {
@@ -105,6 +98,7 @@ final class ConfigureDrinkCollectionCell: UICollectionViewCell {
     lazy var allElementsStackView: UIStackView = {
         let stackview = UIStackView(arrangedSubviews: [drinkImageView,
                                                        yStackNameAndDescriptionDrinkLabelsStackView,
+                                                       sizeDrinkSegmentedControl,
                                                        additiviesButton,
                                                        addDrinkToShoppingCartButton])
         stackview.axis = .vertical

@@ -1,10 +1,3 @@
-//
-//  CoffeeCollectionCell.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 20.01.2023.
-//
-
 import UIKit
 
 final class DrinkCollectionCell: UICollectionViewCell {
@@ -30,7 +23,7 @@ final class DrinkCollectionCell: UICollectionViewCell {
     private enum UIConstants {
         static let sizeFontNameCoffeeLabel: CGFloat = 15
         static let sizeFontPriceCoffeeLabel: CGFloat = 25
-        static let sizeFontFullInformationChevronButton: CGFloat = 25
+        static let sizeFontAddDrinkToShoppingCartLabel: CGFloat = 25
         
         static let cornerRadiusSet: CGFloat = 13
         static let spacingXStack: CGFloat = 4
@@ -77,7 +70,7 @@ final class DrinkCollectionCell: UICollectionViewCell {
         button.setTitle("+", for: .normal)
         button.tintColor = .white
         button.backgroundColor = .systemBlue
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIConstants.sizeFontFullInformationChevronButton)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIConstants.sizeFontAddDrinkToShoppingCartLabel)
         button.layer.cornerRadius = UIConstants.cornerRadiusSet
         button.clipsToBounds = true
         button.titleLabel?.textAlignment = .center
@@ -87,9 +80,6 @@ final class DrinkCollectionCell: UICollectionViewCell {
     private lazy var xStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [priceCoffeeLabel, addDrinkToShoppingCart])
         stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = .fillProportionally
-        stackView.spacing = UIConstants.spacingXStack
         stackView.distribution = .fill
         return stackView
     }()

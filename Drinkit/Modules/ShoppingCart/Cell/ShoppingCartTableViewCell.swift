@@ -1,10 +1,3 @@
-//
-//  ShoppingCartTableViewCell.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 06.03.2023.
-//
-
 import UIKit
 
 class ShoppingCartTableViewCell: UITableViewCell {
@@ -28,10 +21,8 @@ class ShoppingCartTableViewCell: UITableViewCell {
         static let widthPriceOfDrink: CGFloat = 70
         
         static let topAnchorxStack: CGFloat = 6
-        static let leadingAnchorXStack: CGFloat = 16
-        static let trailingAnchorXStack: CGFloat = -16
-        
-        
+        static let leadingAnchorXStack: CGFloat = 6
+        static let trailingAnchorXStack: CGFloat = -6
     }
     
     // MARK: Private property

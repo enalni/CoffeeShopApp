@@ -1,10 +1,3 @@
-//
-//  ShoppingCartView.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 07.02.2023.
-//
-
 import UIKit
 
 protocol ShoppingCartViewDelegate: AnyObject {

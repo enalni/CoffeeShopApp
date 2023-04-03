@@ -1,14 +1,6 @@
-//
-//  PlayerVC.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 22.02.2023.
-//
-
 import AVKit
 
 final class VideoPlayerViewController: AVPlayerViewController {
-    
     // MARK: Public func
     func configure(nameVideo: String) {
         configureVideoPlayback(nameVideo: nameVideo)
@@ -23,7 +15,6 @@ final class VideoPlayerViewController: AVPlayerViewController {
 
 // MARK: Private Methods
 private extension VideoPlayerViewController {
-    
     func initialize() {
         view.backgroundColor = .clear
         showsPlaybackControls = false
@@ -33,7 +24,7 @@ private extension VideoPlayerViewController {
     
     func configureVideoPlayback(nameVideo: String){
         guard let path = Bundle.main.path(forResource: nameVideo, ofType:"MP4") else {
-            debugPrint("video.m4v not found")
+            print("video.m4v not found")
             return
         }
         let templItem = AVPlayerItem(url: URL(fileURLWithPath: path))

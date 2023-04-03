@@ -1,10 +1,3 @@
-//
-//  AuthorizationViewController.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 20.01.2023.
-//
-
 import UIKit
 
 final class AuthorizationViewController: UIViewController {
@@ -32,7 +25,6 @@ final class AuthorizationViewController: UIViewController {
     }
     
     // MARK: - Private property
-    
     weak var delegate: ViewControllerCancelDelegate?
     
     private let titleLabel: UILabel = {
@@ -86,8 +78,6 @@ final class AuthorizationViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
-    
 }
 // MARK: - Private methods
 private extension AuthorizationViewController {
@@ -133,16 +123,15 @@ private extension AuthorizationViewController {
     }
     
     @objc func closeVC() {
-        let vc = self
-        delegate?.viewControllerDidCancel(_controller: vc)
-        print("DEBUG: TAPPED dismissViewControllerButton")
+        delegate?.viewControllerDidCancel(_controller: self)
+        print("TAPPED dismissViewControllerButton")
     }
     
     @objc func getCode() {
-        print("DEBUG: TAPPED getCodeButton")
+        print("TAPPED getCodeButton")
     }
     
     @objc func getPersonalDataDocuments() {
-        print("DEBUG: TAPPED personalDataProcessingButton")
+        print("TAPPED personalDataProcessingButton")
     }
 }

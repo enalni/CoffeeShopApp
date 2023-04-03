@@ -1,10 +1,3 @@
-//
-//  DrinkitView.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 18.01.2023.
-//
-
 import UIKit
 
 final class LocationView: UIView {
@@ -31,6 +24,7 @@ final class LocationView: UIView {
     }
     
     // MARK: - Private property
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "drinkitLogo")
@@ -44,13 +38,13 @@ final class LocationView: UIView {
         let label = UILabel()
         label.textColor = UIColor(named: "colorText")
         label.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeCityLabel)
-        label.text = "Москва"
+        label.text = "name".localized(tableName: "MainModule")
         return label
     }()
     
     private let openingHoursLabel: UILabel = {
         let label = UILabel()
-        label.text = "до 22:00"
+        label.text = "openingHours".localized(tableName: "MainModule") + " " + "22:00"
         label.font = .systemFont(ofSize: 15)
         label.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeOpeningHoursLabel)
         label.textColor = UIColor(named: "colorOpenTime")

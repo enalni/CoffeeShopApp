@@ -1,10 +1,3 @@
-//
-//  LoginViewButton.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 18.01.2023.
-//
-
 import UIKit
 
 final class LoginViewButtonView: UIView {
@@ -32,7 +25,7 @@ final class LoginViewButtonView: UIView {
         let label = UILabel()
         label.font = UIFont(name: "Roboto-Medium", size: UIConstants.sizeFontLabel)
         label.textColor = UIColor(named: "colorText")
-        label.text = "войти"
+        label.text = "login".localized(tableName: "MainModule")
         return label
     }()
     

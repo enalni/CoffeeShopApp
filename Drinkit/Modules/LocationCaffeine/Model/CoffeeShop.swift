@@ -1,10 +1,3 @@
-//
-//  CoffeeShop.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 09.03.2023.
-//
-
 import MapKit
 
 final class CoffeeShop: NSObject, MKAnnotation {

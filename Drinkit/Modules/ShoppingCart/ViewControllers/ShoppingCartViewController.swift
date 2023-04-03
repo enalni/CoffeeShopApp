@@ -1,10 +1,3 @@
-//
-//  ShoppingCartViewController.swift
-//  Drinkit
-//
-//  Created by Александр Николаевич on 03.03.2023.
-//
-
 import UIKit
 
 final class ShoppingCartViewController: UIViewController {
@@ -221,7 +214,7 @@ private extension ShoppingCartViewController {
     
     @objc func closeVC() {
         dismiss(animated: true)
-        print("DEBUG: TAPPED dismissViewControllerButton")
+        print("TAPPED dismissViewControllerButton")
     }
     
     @objc func cleaningDrinks() {
