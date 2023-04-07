@@ -2,7 +2,9 @@
 
 Приложение для заказа напитка в кофейне
 
-![image](https://github.com/enalni/CoffeeShopApp/blob/main/demo.gif)
+![image](https://github.com/enalni/CoffeeShopApp/blob/main/Demo%20gif/demo.gif)
+![image](https://github.com/enalni/CoffeeShopApp/blob/main/Demo%20gif/arab%20screen.png)
+![image](https://github.com/enalni/CoffeeShopApp/blob/main/Demo%20gif/english%20screen.png)
 
 ## Stack
 
