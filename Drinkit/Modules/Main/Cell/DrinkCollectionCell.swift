@@ -23,13 +23,15 @@ final class DrinkCollectionCell: UICollectionViewCell {
     private enum UIConstants {
         static let sizeFontNameCoffeeLabel: CGFloat = 15
         static let sizeFontPriceCoffeeLabel: CGFloat = 25
-        static let sizeFontAddDrinkToShoppingCartLabel: CGFloat = 25
+        static let sizeFontAddDrinkToShoppingCartLabel: CGFloat = 20
         
-        static let cornerRadiusSet: CGFloat = 13
+        static let cornerRadiusSet: CGFloat = 15
         static let spacingXStack: CGFloat = 4
         
         static let yStackTopAndLeadingSet: CGFloat = 16
         static let yStackTrailingAndBottomSet: CGFloat = -16
+        
+        static let sizeAddDrinkButton: CGFloat = 30
         
         static let mockPriceInpriceCoffeeLabel: Int = Int.random(in: 80...150)
     }
@@ -73,14 +75,14 @@ final class DrinkCollectionCell: UICollectionViewCell {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIConstants.sizeFontAddDrinkToShoppingCartLabel)
         button.layer.cornerRadius = UIConstants.cornerRadiusSet
         button.clipsToBounds = true
-        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.textAlignment = .natural
         return button
     }()
     
     private lazy var xStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [priceCoffeeLabel, addDrinkToShoppingCart])
         stackView.axis = .horizontal
-        stackView.distribution = .fill
+        stackView.alignment = .fill
         return stackView
     }()
     
@@ -88,7 +90,6 @@ final class DrinkCollectionCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [coffeeImageView, nameCoffeeLabel, xStack])
         stackView.axis = .vertical
         stackView.alignment = .fill
-        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -120,20 +121,18 @@ private extension DrinkCollectionCell {
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            yStack.topAnchor.constraint(equalTo: containerView.topAnchor),
-            yStack.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: UIConstants.yStackTopAndLeadingSet),
-            yStack.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: UIConstants.yStackTrailingAndBottomSet),
-            yStack.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: UIConstants.yStackTrailingAndBottomSet),
-            
             coffeeImageView.topAnchor.constraint(equalTo: yStack.topAnchor),
             coffeeImageView.leadingAnchor.constraint(equalTo: yStack.leadingAnchor),
             coffeeImageView.trailingAnchor.constraint(equalTo: yStack.trailingAnchor),
             coffeeImageView.heightAnchor.constraint(equalTo: yStack.heightAnchor, multiplier: 1/2),
             
-            nameCoffeeLabel.topAnchor.constraint(equalTo: coffeeImageView.bottomAnchor),
-            nameCoffeeLabel.leadingAnchor.constraint(equalTo: yStack.leadingAnchor),
-            nameCoffeeLabel.trailingAnchor.constraint(equalTo: yStack.trailingAnchor),
-            nameCoffeeLabel.heightAnchor.constraint(equalTo: yStack.heightAnchor, multiplier: 1/3),
+            yStack.topAnchor.constraint(equalTo: containerView.topAnchor),
+            yStack.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: UIConstants.yStackTopAndLeadingSet),
+            yStack.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: UIConstants.yStackTrailingAndBottomSet),
+            yStack.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: UIConstants.yStackTrailingAndBottomSet),
+    
+            addDrinkToShoppingCart.heightAnchor.constraint(equalToConstant: UIConstants.sizeAddDrinkButton),
+            addDrinkToShoppingCart.widthAnchor.constraint(equalToConstant: UIConstants.sizeAddDrinkButton),
         ])
     }
     
